@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>鼠标拾取地图坐标</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script src="qwebchannel.js"></script><!--加载qwebchannel.js-->
+    <script>
+    window.onload = function () {
+        try {
+            new QWebChannel(qt.webChannelTransport, function (channel) {
+                //将QWebChannel的实例挂载到window.PyHandler，后面在javascript中通过window.PyHandler即可调用
+                window.PyHandler = channel.objects.PyHandler;
+            });
+        } catch (e) {
+            window.console.log(e)
+        }
+    }
+    </script>
+</head>
+<style type="text/css">
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    .map{
+        height: 100%;
+        width: 100%;
+        float: left;
+    }
+</style>
+<body>
+<div id="container" class="map"></div>
+<div class="input-card">
+    <h4>左击获取经纬度：</h4>
+    <div class="input-item">
+      <input type="text" readonly="true" id="lnglat">
+    </div>
+</div>
+
+<script src="https://webapi.amap.com/maps?v=1.4.15&key=8177df6428097c5e23d3280ffdc5a13a&plugin=AMap.Autocomplete"></script>
+<script type="text/javascript">
+    var map = new AMap.Map("container", {
+        resizeEnable: true
+    });
+    //为地图注册click事件获取鼠标点击出的经纬度坐标
+    map.on('click', function(e) {
+        var zoom = map.getZoom(); //获取当前地图级别
+        var lng_lat = e.lnglat.getLng() + ',' + e.lnglat.getLat()+','+zoom;
+        document.getElementById("lnglat").value = e.lnglat.getLng() + ',' + e.lnglat.getLat()+','+zoom;
+        window.PyHandler.send_lng_lat(lng_lat)
+    });
+    //将方法挂载到window便于从webengineview访问
+    window.set_zoom_and_center = function (zoom,lng,lat) {
+        document.getElementById("lnglat").value = zoom;
+        map.setZoomAndCenter(zoom, [lng, lat]); //同时设置地图层级与中心点
+    }
+</script>
+</body>
+</html>

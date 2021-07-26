@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <title>PyQt5通过QWebEngineView和QWebChannel搭建交互式浏览器</title>
+    <style>body {
+        margin: 0;
+    }</style>
+    <script src="qwebchannel.js"></script><!--加载qwebchannel.js-->
+    <script>
+    window.onload = function () {
+        try {
+            new QWebChannel(qt.webChannelTransport, function (channel) {
+                //将QWebChannel的实例挂载到window.PyHandler，后面在javascript中通过window.PyHandler即可调用
+                window.PyHandler = channel.objects.PyHandler;
+            });
+        } catch (e) {
+            window.console.log(e)
+        }
+    }
+    </script>
+</head>
+<body>
+<button onclick="window.PyHandler.init_home('hi,pyqt')">点击向python回调</button>
+<div id="app"></div>
+<script>
+    //将方法挂载到window便于从webengineview访问
+    window.say_hello = function (msg) {
+        document.getElementById('app').append("这是从python端收到的消息:"+msg);
+    }
+</script>
+</body>
+</html>
