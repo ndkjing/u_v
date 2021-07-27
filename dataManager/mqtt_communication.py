@@ -149,17 +149,20 @@ class MqttSendGet:
 
     # 连接MQTT服务器
     def mqtt_connect(self):
-        if not self.is_connected:
-            try:
-                self.mqtt_client.connect(self.mqtt_host, self.mqtt_port, 30)
-                # 开启接收循环，直到程序终止
-                self.mqtt_client.loop_start()
-                self.is_connected = 1
-                # 启动后自动订阅话题
-                for topic_, qos_ in self.topics:
-                    self.subscribe_topic(topic=topic_, qos=qos_)
-            except TimeoutError:
-                return
+        while True:
+            if not self.is_connected:
+                try:
+                    self.mqtt_client.connect(self.mqtt_host, self.mqtt_port, 30)
+                    # 开启接收循环，直到程序终止
+                    self.mqtt_client.loop_start()
+                    self.is_connected = 1
+                    # 启动后自动订阅话题
+                    for topic_, qos_ in self.topics:
+                        self.subscribe_topic(topic=topic_, qos=qos_)
+                except TimeoutError:
+                    pass
+            else:
+                time.sleep(5)
 
     # 建立连接时候回调
     def on_connect_callback(self, client, userdata, flags, rc):
