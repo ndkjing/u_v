@@ -10,6 +10,7 @@ from PyQt5.QtWebChannel import QWebChannel
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 import json
 
+
 class CallHandler(QObject):
     def __init__(self):
         super(CallHandler, self).__init__()
@@ -40,7 +41,6 @@ class CallHandler(QObject):
         return json.dumps(dic_info)
 
 
-
 class WebEngine(QWebEngineView):
     def __init__(self):
         super(WebEngine, self).__init__()
@@ -51,6 +51,7 @@ class WebEngine(QWebEngineView):
         self.resize(1100, 650)
         cp = QDesktopWidget().availableGeometry().center()
         self.move(QPoint(cp.x() - self.width() / 2, cp.y() - self.height() / 2))
+
 
 if __name__ == '__main__':
     # 加载程序主窗口

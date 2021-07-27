@@ -54,11 +54,32 @@
         document.getElementById("lnglat").value = e.lnglat.getLng() + ',' + e.lnglat.getLat()+','+zoom;
         window.PyHandler.send_lng_lat(lng_lat)
     });
-    //将方法挂载到window便于从webengineview访问
+    //设置中心点
     window.set_zoom_and_center = function (zoom,lng,lat) {
         document.getElementById("lnglat").value = zoom;
         map.setZoomAndCenter(zoom, [lng, lat]); //同时设置地图层级与中心点
     }
+    //绘制点
+    window.add_line = function (line_list) {
+        var lineArr = [[114.144539, 30.492879],
+            [114.153809, 30.490808],
+            [114.153809, 30.500808]];
+    var polyline = new AMap.Polyline({
+        path: lineArr,          //设置线覆盖物路径
+        strokeColor: "#3366FF", //线颜色
+        strokeWeight: 5,        //线宽
+        strokeStyle: "solid",   //线样式
+    });
+    map.add(polyline);
+}
+
+    //绘制线
+    window.add_marker = function (lng,lat) {
+    var marker = new AMap.Marker({
+            position:[lng, lat]//位置
+        });
+    map.add(marker);//添加到地图
+}
 </script>
 </body>
 </html>

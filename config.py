@@ -3,6 +3,32 @@ import platform
 import os
 
 
+class ShipControlStatus(enum.Enum):
+    """
+    船状态
+    手动
+    单点
+    多点
+    返航
+    定点
+    """
+    hand_control = 1
+    single_point = 2
+    multi_points = 3
+    backhome = 4
+    fix_point=5
+
+class MoveDirection(enum.Enum):
+    forward = 0
+    backward = 1
+    left = 2
+    right = 3
+    stop = 4
+    north = 5
+    south = 6
+    east = 7
+    west = 8
+
 class CommunicationMethod(enum.Enum):
     lora = 0
     mqtt = 1
@@ -53,7 +79,7 @@ pi2mqtt_interval = 1
 # 线程等待时间
 thread_sleep_time = 0.5
 # 船编号
-ship_code = 'abcs'
+ship_code = '3c50f4c3-a9c1-4872-9f18-883af014380c'
 # 串口位置和波特率
 # 单片机
 # stc_port = '/dev/ttyAMA0'
@@ -149,11 +175,26 @@ debug_send_detect_data = 0
 # 转向速度
 angular_velocity = 90
 
+topics = [('pool_click_%s' % ship_code, 0),
+          ('control_data_%s' % ship_code, 0),
+          ('path_confirm_%s' % ship_code, 0),
+          ('user_lng_lat_%s' % ship_code, 0),
+          ('start_%s' % ship_code, 0),
+          ('switch_%s' % ship_code, 0),
+          ('pool_info_%s' % ship_code, 0),
+          ('auto_lng_lat_%s' % ship_code, 0),
+          ('path_planning_%s' % ship_code, 0),
+          ('status_data_%s' % ship_code, 0),
+          ('base_setting_%s' % ship_code, 0),
+          ('height_setting_%s' % ship_code, 0),
+          ('refresh_%s' % ship_code, 0),
+          ('reset_pool_%s' % ship_code, 0),
+          ('heart_%s' % ship_code, 0),
+          ('set_home_%s' % ship_code, 0),
+          ('poweroff_restart_%s' % ship_code, 0),
+          ('path_planning_confirm_%s' % ship_code, 0)
+          ]
 
-topics = (
-            ('pool_click_%s' % ship_code, 0),
-            ('control_data_%s' % ship_code, 0),
-            ('path_confirm_%s' % ship_code, 0),
-            ('user_lng_lat_%s' % ship_code, 0),
-            ('start_%s' % ship_code, 0),
-)
+video_src = 'rtmp://rtmp01open.ys7.com:1935/v3/openlive/D50551834_1_2?expire=1657329096&id' \
+                          '=335347591388602368&t=e1dd42835fd9bece1478d0d19d68b727dafbb8630d96a1272d65c3f389dd9bca&ev' \
+                          '=100 '

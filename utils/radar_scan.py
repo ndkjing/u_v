@@ -5,6 +5,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 import math
 
+
 class StockDialog(QWidget):
     def __init__(self, parent=None):
         super(StockDialog, self).__init__(parent)
@@ -237,7 +238,7 @@ class PaintArea(QWidget):
         self.brush = b
         self.update()
 
-    def paintEvent(self, QPaintEvent,b_first=True):
+    def paintEvent(self, QPaintEvent, b_first=True):
         # p = self.p
         p = QPainter(self)
         p.setPen(self.pen)
@@ -258,7 +259,7 @@ class PaintArea(QWidget):
             # 求起点和终点 绘制线
             point1 = QPoint(200, 200)
             theta = math.radians(self.theta)
-            print('self.theta',self.theta,theta)
+            print('self.theta', self.theta, theta)
             self.theta += 2
             self.theta %= 360
             if 0 <= theta < 90:

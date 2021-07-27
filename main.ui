@@ -21,17 +21,53 @@
        <string/>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
-        <widget class="QLabel" name="dump_energy_label">
+        <widget class="QLabel" name="logo_label">
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="time_label">
          <property name="text">
           <string>TextLabel</string>
          </property>
         </widget>
        </item>
        <item>
+        <widget class="QLabel" name="direction_label">
+         <property name="text">
+          <string>航向角：123</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="dump_energy_label">
+         <property name="text">
+          <string>剩余电量：83%</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="remote_control_label">
          <property name="text">
-          <string>TextLabel</string>
+          <string>启动遥控：0</string>
          </property>
         </widget>
        </item>
@@ -71,17 +107,46 @@
           <string/>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="reload_button">
+            <property name="text">
+             <string>刷新页面</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="reselect_button">
+            <property name="text">
+             <string>重选湖泊</string>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QLabel" name="angle_label">
             <property name="text">
-             <string>TextLabel</string>
+             <string>湖泊信息：</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="detect_label">
             <property name="text">
-             <string>TextLabel</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;天气&lt;/p&gt;&lt;p&gt;水质&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -93,7 +158,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QProgressBar" name="progressBar">
+           <widget class="QProgressBar" name="progress_bar">
             <property name="value">
              <number>24</number>
             </property>
@@ -140,7 +205,7 @@
              <item>
               <widget class="QLabel" name="video_label">
                <property name="text">
-                <string>TextLabel</string>
+                <string>图像</string>
                </property>
               </widget>
              </item>
@@ -150,7 +215,7 @@
           <item>
            <widget class="QLabel" name="distance_show_label">
             <property name="text">
-             <string>TextLabel</string>
+             <string>障碍物信息</string>
             </property>
            </widget>
           </item>
@@ -166,6 +231,21 @@
        <string/>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QGroupBox" name="groupBox_7">
          <property name="title">
@@ -192,12 +272,24 @@
             <property name="text">
              <string>左</string>
             </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="forward_button">
             <property name="text">
              <string>上</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -206,6 +298,12 @@
             <property name="text">
              <string>右</string>
             </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="1">
@@ -213,12 +311,24 @@
             <property name="text">
              <string>停止</string>
             </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="2" column="1">
            <widget class="QPushButton" name="backword_button">
             <property name="text">
              <string>下</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -231,10 +341,37 @@
           <string/>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
            <widget class="QPushButton" name="single_point_button">
             <property name="text">
              <string>单点</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>false</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -243,12 +380,34 @@
             <property name="text">
              <string>多点</string>
             </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="backhome_button">
+            <property name="text">
+             <string>返航</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="fix_point_button">
             <property name="text">
              <string>定点</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
