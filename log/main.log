@@ -255,3 +255,21 @@
 2021-07-27 15:54:37,950 start.py[line:297] INFO window.add_marker('114.438899','30.440760')
 2021-07-27 15:54:39,165 start.py[line:314] INFO {'gps data': '114.443019,30.480415,11'}
 2021-07-27 15:54:39,189 start.py[line:297] INFO window.add_marker('114.443019','30.480415')
+2021-07-27 17:07:58,765 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:00,075 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:00,526 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:00,981 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:03,490 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:08,231 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:09,158 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 17:09:00,210 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:03,498 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:04,706 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:05,350 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:05,546 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:05,738 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:36,061 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:36,799 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:37,477 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:37,810 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:38,262 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}

@@ -12,8 +12,11 @@ from PyQt5.QtWebChannel import QWebChannel
 from PyQt5.QtGui import QIcon, QPixmap, QImage
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5 import QtWidgets
+from PyQt5 import QtCore
 from PyQt5.QtWidgets import QApplication, QDesktopWidget, QGridLayout
-from PyQt5.QtCore import QObject, pyqtSlot, QUrl, Qt, QPoint, QThread, QTimer, QDateTime
+from PyQt5.QtCore import QObject, pyqtSlot, QUrl, Qt, QPoint, QThread, QTimer, QDateTime, QDate
+from QCandyUi.CandyWindow import colorful
+from QCandyUi import CandyWindow
 
 import main
 from dataManager import data_define
@@ -22,6 +25,7 @@ from utils import log
 from utils import opencv_radar_scan
 
 import config
+
 logger = log.LogHandler('main')
 
 
@@ -51,6 +55,7 @@ class DistanceShowThread(QThread):
     """
     摄像头对象
     """
+
     def __init__(self, radar_obj, parent=None, run_func=None):
         """初始化方法"""
         super().__init__(parent)
@@ -82,13 +87,18 @@ class MainDialog(QMainWindow):
         # 显示障碍物
         self.radar_obj = opencv_radar_scan.RadarScan()
         self.radar_work = DistanceShowThread(radar_obj=self.radar_obj,
-                                       parent=None,
-                                       run_func=self.display_distance)
+                                             parent=None,
+                                             run_func=self.display_distance)
         self.radar_work.start()
         # 初始化信号
         self.init_signal_slot()
         self.timer = QTimer()
         self.init_timer()
+        # 美化
+        self.decorate_page()
+
+    def decorate_page(self):
+        pass
 
     # 绑定信号连接
     def init_signal_slot(self):
@@ -148,7 +158,7 @@ class MainDialog(QMainWindow):
                     # print(self.ui.video_label.width(), self.ui.video_label.height())
                     frame = cv2.resize(frame, (self.ui.video_label.width(), self.ui.video_label.height()),
                                        interpolation=cv2.INTER_AREA)
-                    img = QImage(frame.data, frame.shape[1], frame.shape[0], QImage.Format_RGB888)
+                    img = QImage(frame.data, frame.shape[1], frame.shape[0], frame.shape[1] * 3, QImage.Format_RGB888)
                     label.setPixmap(QPixmap.fromImage(img))
                     cv2.waitKey(1)
                     start_time = time.time()
@@ -163,11 +173,9 @@ class MainDialog(QMainWindow):
                 # frame = cv2.resize(frame, (self.ui.distance_show_label.width(), self.ui.distance_show_label.height()),
                 #                    interpolation=cv2.INTER_AREA)
                 resize = min(self.ui.distance_show_label.width(), self.ui.distance_show_label.height())
-                resize = int(resize*0.75)
-                # print('distance label',resize,self.ui.distance_show_label.width(), self.ui.distance_show_label.height())
                 frame = cv2.resize(frame, (resize, resize),
                                    interpolation=cv2.INTER_AREA)
-                img = QImage(frame.data, frame.shape[1], frame.shape[0], QImage.Format_RGB888)
+                img = QImage(frame.data, frame.shape[1], frame.shape[0], frame.shape[1] * 3, QImage.Format_RGB888)
                 self.ui.distance_show_label.setPixmap(QPixmap.fromImage(img))
                 cv2.waitKey(1)
                 start_time = time.time()
@@ -188,6 +196,7 @@ class MainDialog(QMainWindow):
 
     # 初始化定时器
     def init_timer(self):
+        self.ui.time_lcd.setDigitCount(8)
         timer = QTimer(self)
         timer.timeout.connect(self.showtime)
         timer.timeout.connect(self.map_center)
@@ -239,9 +248,15 @@ class MainDialog(QMainWindow):
         显示时间标签
         :return:
         """
-        datetime = QDateTime.currentDateTime()
-        text = datetime.toString()
-        self.ui.time_label.setText("  " + text)
+        time = QtCore.QTime.currentTime()
+        text = time.toString('hh:mm:ss')
+        self.ui.time_lcd.display(text)
+        now = QDate.currentDate()
+        # print(now)  # PyQt5.QtCore.QDate(2018, 12, 3)
+        # print(now.toString())  # 周一 12月 3 2018
+        # print(now.toString(Qt.ISODate))  # 2018-12-03
+        # print(now.toString(Qt.DefaultLocaleLongDate))  # 2018年12月3日, 星期一
+        self.ui.time_label.setText(now.toString(Qt.DefaultLocaleLongDate))
 
     def update_move(self):
         sender = self.sender()
@@ -336,6 +351,8 @@ class MainDialog(QMainWindow):
                 self.data_manager_obj.send_data(msg=msg)
 
 
+from qt_material import apply_stylesheet
+
 if __name__ == '__main__':
     myapp = QApplication(sys.argv)
     myDlg = MainDialog()
@@ -345,8 +362,43 @@ if __name__ == '__main__':
     view.page().setWebChannel(channel)  # 挂载前端处理对象
     url_string = urllib.request.pathname2url(os.path.join(os.getcwd(), "gaode.html"))  # 加载本地html文件
     view.load(QUrl(url_string))
-
     myDlg.ui.horizontalLayout_6.addWidget(view)
     myDlg.view = view
+    # todo 2 设置窗口背景色
+    myDlg.setWindowOpacity(0.9)  # 设置窗口透明度
+    apply_stylesheet(myapp, theme='dark_teal.xml')
+    # myDlg.setWindowFlag(QtCore.Qt.FramelessWindowHint)  # 隐藏边框
+    # myDlg.setAttribute(QtCore.Qt.WA_TranslucentBackground)  # 设置窗口背景透明
+    # myDlg.setStyleSheet("#MainWindow{border-image:url(./statics/background.jpg);}")
+    qss = '''
+    QPushButton#pushButton
+    {
+    # font-family:"Webdings";
+    text-align:top;
+    background:#6DDF6D;border-radius:5px;
+    border:none;
+    font-size:13px;
+    }
+    QPushButton#pushButton:hover{background:green;}
+
+    QPushButton#pushButton_2
+    {
+    font-family:"Webdings";
+    background:#F7D674;border-radius:5px;
+    border:none;
+    font-size:13px;
+    }
+    QPushButton#pushButton_2:hover{background:yellow;}
+
+    QPushButton#pushButton_3
+    {
+    font-family:"Webdings";
+    background:#F76677;border-radius:5px;
+    border:none;
+    font-size:13px;
+    }
+    QPushButton#pushButton_3:hover{background:red;}
+    '''
+    myDlg.setStyleSheet(qss)
     myDlg.show()
     sys.exit(myapp.exec_())
