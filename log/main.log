@@ -273,3 +273,12 @@
 2021-07-27 18:05:37,477 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
 2021-07-27 18:05:37,810 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
 2021-07-27 18:05:38,262 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 19:19:58,937 start.py[line:329] INFO {'gps data': '115.533363,39.797013,7'}
+2021-07-27 19:19:58,942 start.py[line:312] INFO window.add_marker('115.533363','39.797013')
+2021-07-27 19:19:59,778 start.py[line:329] INFO {'gps data': '114.962074,39.712551,7'}
+2021-07-27 19:19:59,805 start.py[line:312] INFO window.add_marker('114.962074','39.712551')
+2021-07-27 19:20:07,272 start.py[line:329] INFO {'gps data': '115.831797,39.905078,14'}
+2021-07-27 19:20:07,272 start.py[line:312] INFO window.add_marker('115.831797','39.905078')
+2021-07-27 19:32:35,008 start.py[line:256] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 19:45:51,870 start.py[line:353] INFO {'gps data': '117.011025,40.502395,7'}
+2021-07-27 19:45:51,876 start.py[line:336] INFO window.add_marker('117.011025','40.502395')

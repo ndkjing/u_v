@@ -9,14 +9,14 @@ import cv2
 import urllib
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 from PyQt5.QtWebChannel import QWebChannel
-from PyQt5.QtGui import QIcon, QPixmap, QImage
+from PyQt5.QtGui import QIcon, QPixmap, QImage,QMovie
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5 import QtWidgets
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QApplication, QDesktopWidget, QGridLayout
 from PyQt5.QtCore import QObject, pyqtSlot, QUrl, Qt, QPoint, QThread, QTimer, QDateTime, QDate
-from QCandyUi.CandyWindow import colorful
-from QCandyUi import CandyWindow
+from qt_material import apply_stylesheet
+
 
 import main
 from dataManager import data_define
@@ -96,6 +96,43 @@ class MainDialog(QMainWindow):
         self.init_timer()
         # 美化
         self.decorate_page()
+        self.init_widget()
+
+    def init_widget(self):
+        """
+        初始化控件设置和内容信息
+        :return:
+        """
+        print('init drag')
+        self.ui.logo_label.setAcceptDrops(True)
+        movie = QMovie("./statics/ship.gif")
+        # 设置logo 拖放失败
+        pix = QPixmap('./statics/logo.ico')
+        self.ui.logo_label.setPixmap(pix)
+        self.ui.logo_label.setScaledContents(True)
+        # self.ui.logo_label.setMovie(movie)
+        # self.ui.logo_label.setMinimumSize(10, 10)
+        # self.ui.logo_label.setMaximumSize(self.ui.logo_label.height(),self.ui.logo_label.width())
+        # movie.start()
+
+    # def resizeEvent(self, event):
+    #     rect = self.ui.logo_label.geometry()
+    #     size = min(rect.width(), rect.height())
+    #     movie = self.self.ui.logo_label.movie()
+    #     movie.setScaledSize(QtCore.QSize(size, size))
+    #     self.ui.logo_label.adjustSize()
+
+    def dragEnterEvent(self, e):
+        print('drag',e.mimeData().text())
+        if e.mimeData().text().endswith('.srt'):  # 如果是.srt结尾的路径接受
+            e.accept()
+        else:
+            e.ignore()
+
+    def dropEvent(self, e):  # 放下文件后的动作
+        print('drop',e.mimeData().text())
+        path = e.mimeData().text().replace('file:///', '')  # 删除多余开头
+        self.setText(path)
 
     def decorate_page(self):
         pass
@@ -200,7 +237,13 @@ class MainDialog(QMainWindow):
         timer = QTimer(self)
         timer.timeout.connect(self.showtime)
         timer.timeout.connect(self.map_center)
+        timer.timeout.connect(self.update_base_info)
         timer.start(1000)
+
+    def update_base_info(self):
+        self.ui.distance_lcd.display(str(self.data_manager_obj.receive_data_obj.mqtt_send_get_obj.run_distance)+'m')
+        self.ui.progress_bar.setValue(68)
+
 
     def update_control_status(self):
         """
@@ -350,12 +393,12 @@ class MainDialog(QMainWindow):
 
                 self.data_manager_obj.send_data(msg=msg)
 
-
-from qt_material import apply_stylesheet
-
 if __name__ == '__main__':
     myapp = QApplication(sys.argv)
+    desktop = QApplication.desktop()
+    print(desktop.width() * 0.6, desktop.height() * 0.6)
     myDlg = MainDialog()
+    # myDlg.setFixedSize(desktop.width() * 0.6, desktop.height() * 0.6)
     view = WebEngine()
     channel = QWebChannel()
     channel.registerObject('PyHandler', myDlg)  # 将前端处理对象在前端页面中注册为名PyHandler对象，此对象在前端访问时名称即为PyHandler'

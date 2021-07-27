@@ -146,7 +146,8 @@ class MqttSendGet:
         self.back_home = 0
         self.fix_point = 0
         self.is_connected = 0
-
+        #
+        self.run_distance = 0
     # 连接MQTT服务器
     def mqtt_connect(self):
         while True:
