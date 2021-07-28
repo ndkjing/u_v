@@ -176,6 +176,8 @@ debug_send_detect_data = 0
 angular_velocity = 90
 
 topics = [('pool_click_%s' % ship_code, 0),
+          ('notice_info_%s' % ship_code, 0),
+          ('detect_data_%s' % ship_code, 0),
           ('control_data_%s' % ship_code, 0),
           ('path_confirm_%s' % ship_code, 0),
           ('user_lng_lat_%s' % ship_code, 0),

@@ -12,45 +12,43 @@ Website: zetcode.com
 Last edited: August 2017
 """
 
-from PyQt5.QtWidgets import (QPushButton, QWidget,
-    QLineEdit, QApplication)
+from PyQt5.QtWidgets import QPushButton, QWidget, QLineEdit, QApplication, QLabel
 import sys
 
-class Button(QPushButton):
 
-    def __init__(self, title, parent):
-        super().__init__(title, parent)
-
+class DropAreaLabel(QLabel):
+    def __init__(self, *args, **kwargs):
+        super(DropAreaLabel, self).__init__(*args, **kwargs)
         self.setAcceptDrops(True)
 
-
-    def dragEnterEvent(self, e):
-
-        if e.mimeData().hasFormat('text/plain'):
-            e.accept()
+    def dragEnterEvent(self, event):
+        print("drag event")
+        if event.mimeData().hasUrls():
+            event.accept()
         else:
-            e.ignore()
+            event.ignore()
 
-    def dropEvent(self, e):
-
-        self.setText(e.mimeData().text())
+    def dropEvent(self, event):
+        print("drop event")
+        files = list()
+        urls = [u for u in event.mimeData().urls()]
+        for url in urls:
+            print(url.path())
+            files.append(url.toLocalFile())
+        print(files)
 
 
 class Example(QWidget):
-
     def __init__(self):
         super().__init__()
-
         self.initUI()
 
-
     def initUI(self):
-
         edit = QLineEdit('', self)
         edit.setDragEnabled(True)
+        edit.setAcceptDrops(True)
         edit.move(30, 65)
-
-        button = Button("Button", self)
+        button = DropAreaLabel("Button", self)
         button.move(190, 65)
 
         self.setWindowTitle('Simple drag and drop')
@@ -58,15 +56,8 @@ class Example(QWidget):
 
 
 if __name__ == '__main__':
-
-    app = QApplication(sys.argv)
-    ex = Example()
-    ex.show()
-    app.exec_()
-
-class Button(QPushButton):
-
-    def __init__(self, title, parent):
-        super().__init__(title, parent)
-
-        self.setAcceptDrops(True)
+    # app = QApplication(sys.argv)
+    # ex = Example()
+    # ex.show()
+    # app.exec_()
+    print(int(True),int(False))

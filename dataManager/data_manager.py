@@ -11,11 +11,13 @@ from dataManager import mqtt_communication
 
 class DataManager:
     def __init__(self, data_obj=None):
+        self.data_obj = data_obj
         if config.communication == config.CommunicationMethod.lora:
-            self.receive_data_obj = lora_communication.LoraCommunication()
+            self.receive_data_obj = lora_communication.LoraCommunication(data_obj)
         elif config.communication == config.CommunicationMethod.mqtt:
             self.receive_data_obj = mqtt_communication.MqttCommunication(log.LogHandler('MqttCommunication'),
-                                                                         config.topics)
+                                                                         config.topics,
+                                                                         data_obj)
             self.init_thread()
 
     def init_thread(self):
