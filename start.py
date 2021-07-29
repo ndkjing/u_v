@@ -17,7 +17,7 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import pyqtSlot, QUrl, Qt, QThread, QTimer, QDate
 from qt_material import apply_stylesheet
 
-from ui import main_ui, base_setting_ui, advance_setting_ui
+from ui import main_ui, base_setting_ui, advance_setting_ui,author_ui
 from dataManager import data_define
 from dataManager import data_manager
 from utils import log
@@ -55,6 +55,30 @@ class BaseSettingWindow(QDialog):
         else:
             event.ignore()
 
+class AuthorWindow(QDialog):
+    def __init__(self):
+        QDialog.__init__(self)
+        self.ui = author_ui.Ui_Form()
+        self.ui.setupUi(self)
+
+    # def closeEvent(self, event):
+    #     """
+    #     对MainWindow的函数closeEvent进行重构
+    #     退出软件时结束所有进程
+    #     :param event:
+    #     :return:
+    #     """
+    #     reply = QtWidgets.QMessageBox.question(self,
+    #                                            '本程序',
+    #                                            "是否要退出基础设置页面？",
+    #                                            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+    #                                            QtWidgets.QMessageBox.No)
+    #     if reply == QtWidgets.QMessageBox.Yes:
+    #         event.accept()
+    #         self.base_setting_signal.emit()
+    #         print('exit base setting')
+    #     else:
+    #         event.ignore()
 
 class AdvanceSettingWindow(QDialog):
     advance_setting_signal = QtCore.pyqtSignal()
@@ -157,6 +181,7 @@ class MainWindow(QMainWindow):
         self.base_setting_obj = BaseSettingWindow()
         # 高级设置页面
         self.advance_setting_obj = AdvanceSettingWindow()
+        self.author_obj = AuthorWindow()
         # 显示地图对象
         self.view = None
         # 显示视频
@@ -281,9 +306,13 @@ class MainWindow(QMainWindow):
         # 绑定基本设置和高级设置
         self.ui.base_setting_action.triggered.connect(self.get_base_setting_data)
         self.ui.advance_setting_action.triggered.connect(self.get_advance_setting_data)
+        self.ui.about_author_action.triggered.connect(self.show_author)
         # 绑定设置页面退出信号
         self.base_setting_obj.base_setting_signal.connect(self.send_base_setting_data)
         self.advance_setting_obj.advance_setting_signal.connect(self.send_advance_setting_data)
+
+    def show_author(self):
+        self.author_obj.show()
 
     def get_base_setting_input_data(self):
         """
@@ -313,62 +342,71 @@ class MainWindow(QMainWindow):
             advance_input_dict["right_motor_cw"] = 0
         else:
             advance_input_dict["right_motor_cw"] = 1
-        advance_input_dict["kp"] = self.advance_setting_obj.ui.kp_spin_box.value()/10.0
-        advance_input_dict["ki"] = self.advance_setting_obj.ui.ki_spin_box.value()/10.0
-        advance_input_dict["kd"] = self.advance_setting_obj.ui.kd_spin_box.value()/10.0
+        advance_input_dict["kp"] = self.advance_setting_obj.ui.kp_spin_box.value() / 10.0
+        advance_input_dict["ki"] = self.advance_setting_obj.ui.ki_spin_box.value() / 10.0
+        advance_input_dict["kd"] = self.advance_setting_obj.ui.kd_spin_box.value() / 10.0
         advance_input_dict["max_pwm"] = int(self.advance_setting_obj.ui.max_pwm_line_edit.text())
         advance_input_dict["min_pwm"] = int(self.advance_setting_obj.ui.min_pwm_line_edit.text())
         advance_input_dict["full_speed_meter"] = int(self.advance_setting_obj.ui.full_speed_line_edit.text())
         advance_input_dict["check_status_interval"] = self.advance_setting_obj.ui.check_status_spin_box.value()
         advance_input_dict["check_network_interval"] = self.advance_setting_obj.ui.check_connect_spin_box.value()
-        advance_input_dict["draw_time"] = int(self.advance_setting_obj.ui.tasking_spin_box.value())
+        advance_input_dict["draw_time"] = str(self.advance_setting_obj.ui.tasking_spin_box.value())
         advance_input_dict["home_debug"] = int(self.advance_setting_obj.ui.is_debug_radio_button.isChecked())
         advance_input_dict["b_play_audio"] = int(self.advance_setting_obj.ui.is_play_audio_radio_button.isChecked())
-        advance_input_dict["path_track_type"] = self.advance_setting_obj.ui.path_track_combo_box.currentIndex()+1
-        advance_input_dict["path_plan_type"] = self.advance_setting_obj.ui.path_planning_combo_box.currentIndex()+1
-        advance_input_dict["obstacle_avoid_type"] = self.advance_setting_obj.ui.avoidance_combo_box.currentIndex()+1
+        advance_input_dict["path_track_type"] = self.advance_setting_obj.ui.path_track_combo_box.currentIndex() + 1
+        advance_input_dict["path_plan_type"] = self.advance_setting_obj.ui.path_planning_combo_box.currentIndex() + 1
+        advance_input_dict["obstacle_avoid_type"] = self.advance_setting_obj.ui.avoidance_combo_box.currentIndex() + 1
         advance_input_dict["b_tsp"] = int(self.advance_setting_obj.ui.is_use_tsp_radio_button.isChecked())
-        advance_input_dict["network_backhome"] = int(self.advance_setting_obj.ui.network_backhome_radio_button.isChecked())
-        advance_input_dict["energy_backhome"] = int(self.advance_setting_obj.ui.energy_backhome_radio_button.isChecked())
+        advance_input_dict["network_backhome"] = int(
+            self.advance_setting_obj.ui.network_backhome_radio_button.isChecked())
+        advance_input_dict["energy_backhome"] = int(
+            self.advance_setting_obj.ui.energy_backhome_radio_button.isChecked())
         advance_input_dict["calibration_compass"] = int(self.advance_setting_obj.ui.celebrate_push_button.isChecked())
         return advance_input_dict
 
     def send_base_setting_data(self):
-        base_input_dict = self.get_base_setting_input_data()
-        print(base_input_dict)
-        is_send_data = False
-        for key, value in base_input_dict.items():
-            if self.data_obj.base_setting_data.get(key) != value:
-                print('key',key, self.data_obj.base_setting_data.get(key), value)
-                is_send_data = True
-        if is_send_data:
-            base_input_dict["info_type"] = 2
-            msg = (
-                "base_setting_%s" % config.ship_code,
-                base_input_dict
-            )
-            logger.info(msg)
-            self.data_manager_obj.send_data(msg=msg)
+        if self.data_obj.base_setting_data is None:
+            pass
         else:
-            logger.info('没有改变基础设置数据')
+            base_input_dict = self.get_base_setting_input_data()
+            print(base_input_dict)
+            is_send_data = False
+            for key, value in base_input_dict.items():
+                if self.data_obj.base_setting_data.get(key) != value:
+                    print('key', key, self.data_obj.base_setting_data.get(key), value)
+                    is_send_data = True
+            if is_send_data:
+                base_input_dict["info_type"] = 2
+                msg = (
+                    "base_setting_%s" % config.ship_code,
+                    base_input_dict
+                )
+                logger.info(msg)
+                self.data_manager_obj.send_data(msg=msg)
+            else:
+                logger.info('没有改变基础设置数据')
 
     def send_advance_setting_data(self):
-        advance_input_data = self.get_advance_setting_input_data()
-        is_send_data = False
-        for key, value in advance_input_data.items():
-            if self.data_obj.height_setting_data.get(key) != value:
-                print('key', key, self.data_obj.height_setting_data.get(key), value)
-                is_send_data = True
-        if is_send_data:
-            advance_input_data["info_type"] = 2
-            msg = (
-                "height_setting_%s" % config.ship_code,
-                advance_input_data
-            )
-            logger.info(msg)
-            # self.data_manager_obj.send_data(msg=msg)
+        if self.data_obj.height_setting_data is None:
+            pass
         else:
-            logger.info('没有改变高级设置数据')
+            advance_input_data = self.get_advance_setting_input_data()
+            is_send_data = False
+            for key, value in advance_input_data.items():
+                if self.data_obj.height_setting_data.get(key) != value:
+                    print(type(self.data_obj.height_setting_data.get(key)), type(value))
+                    print('key', key, self.data_obj.height_setting_data.get(key), value)
+                    is_send_data = True
+            if is_send_data:
+                advance_input_data["info_type"] = 2
+                msg = (
+                    "height_setting_%s" % config.ship_code,
+                    advance_input_data
+                )
+                logger.info(msg)
+                self.data_manager_obj.send_data(msg=msg)
+            else:
+                logger.info('没有改变高级设置数据')
 
     def get_base_setting_data(self):
         """
@@ -579,7 +617,6 @@ class MainWindow(QMainWindow):
         timer.start(1000)
 
     def update_detect_info(self):
-
         if self.data_obj.wt is not None:
             self.ui.detect_label.setText('水质数据:')
             show_detect_data = '水质数据: 水温 %.1f pH %.1f 溶解氧 %.2f 浊度 %.2f 电导率 %.2f' % (self.data_obj.wt,
@@ -596,7 +633,7 @@ class MainWindow(QMainWindow):
         if self.data_obj.head_direction is not None:
             self.ui.direction_label.setText('航向:%.1f' % self.data_obj.head_direction)
         if self.data_obj.pool_code is not None:
-            self.ui.pool_label.setText("湖泊ID" + self.data_obj.pool_code)
+            self.ui.pool_label.setText("湖泊ID: " + self.data_obj.pool_code)
         self.ui.distance_lcd.display(str(self.data_obj.run_distance))
         self.ui.progress_bar.setValue(self.data_obj.progress)
 
@@ -715,7 +752,7 @@ class MainWindow(QMainWindow):
     # 在地图上添加标记物
     def map_add_marker(self):
         str_command = "window.add_marker('%f','%f')" % \
-                      (self.data_obj.lng_lat[0], self.data_obj.lng_lat[1])
+                      (self.data_obj.click_lng_lat[0], self.data_obj.click_lng_lat[1])
         logger.info(str_command)
         view.page().runJavaScript(str_command)
 
@@ -737,10 +774,12 @@ class MainWindow(QMainWindow):
         lng_lat_zoom = str_args.split(',')
         print('lng_lat_zoom', lng_lat_zoom)
         if len(lng_lat_zoom) == 3:
-            self.data_obj.lng_lat = [float(lng_lat_zoom[0]), float(lng_lat_zoom[1])]
-            self.data_obj.zoom = int(lng_lat_zoom[2])
+            self.data_obj.click_lng_lat = [float(lng_lat_zoom[0]), float(lng_lat_zoom[1])]
+            self.data_obj.click_zoom = int(lng_lat_zoom[2])
             self.map_add_marker()
-            if self.data_obj.control_mode == config.ShipControlStatus.single_point:
+            # 如果还没有找到湖泊标记为找湖
+            print('self.data_obj.pool_code',self.data_obj.pool_code)
+            if self.data_obj.pool_code is None:
                 send_dict = {
                     # 设备号
                     "deviceId": config.ship_code,
@@ -753,30 +792,55 @@ class MainWindow(QMainWindow):
                     'pool_click_%s' % config.ship_code,
                     send_dict
                 )
-                print('send data', msg)
-
-                self.data_manager_obj.send_data(msg=msg)
+                logger.info(msg)
+                # self.data_manager_obj.send_data(msg=msg)
+                # 查找湖泊
+                self.data_manager_obj.find_pool()
+            # 已经找到后标记为添加目标点
+            else:
+                if self.data_obj.control_mode == config.ShipControlStatus.single_point:
+                    self.data_obj.target_lng_lat = [float(lng_lat_zoom[0]), float(lng_lat_zoom[1])]
+                    send_dict={
+                        "deviceId": "asd2312",
+                        "mapId": "12321",
+                        # 准备执行采样或检测的点经纬度
+                        "sampling_points": [self.data_obj.target_lng_lat],
+                        # 准备行驶点经纬度
+                        "path_points": [self.data_obj.target_lng_lat],
+                        # 路径编号
+                        "path_id": 1
+                    }
+                    msg = (
+                        'path_planning_%s' % config.ship_code,
+                        send_dict
+                    )
+                    logger.info(msg)
+                    self.data_manager_obj.send_data(msg=msg)
+                elif self.data_obj.control_mode == config.ShipControlStatus.multi_points:
+                    self.data_obj.target_lng_lat.append([float(lng_lat_zoom[0]), float(lng_lat_zoom[1])])
 
 
 if __name__ == '__main__':
-    myapp = QApplication(sys.argv)
-    desktop = QApplication.desktop()
-    print(desktop.width() * 0.6, desktop.height() * 0.6)
-    main_win = MainWindow()
-    # myDlg.setFixedSize(desktop.width() * 0.6, desktop.height() * 0.6)
-    view = WebEngine()
-    channel = QWebChannel()
-    channel.registerObject('PyHandler', main_win)  # 将前端处理对象在前端页面中注册为名PyHandler对象，此对象在前端访问时名称即为PyHandler'
-    view.page().setWebChannel(channel)  # 挂载前端处理对象
-    url_string = urllib.request.pathname2url(os.path.join(os.getcwd(), "gaode.html"))  # 加载本地html文件
-    view.load(QUrl(url_string))
-    main_win.ui.horizontalLayout_6.addWidget(view)
-    main_win.view = view
-    # todo 2 设置窗口背景色
-    main_win.setWindowOpacity(0.9)  # 设置窗口透明度
-    apply_stylesheet(myapp, theme='dark_teal.xml')
-    # myDlg.setWindowFlag(QtCore.Qt.FramelessWindowHint)  # 隐藏边框
-    # myDlg.setAttribute(QtCore.Qt.WA_TranslucentBackground)  # 设置窗口背景透明
-    # myDlg.setStyleSheet("#MainWindow{border-image:url(./statics/background.jpg);}")
-    main_win.show()
-    sys.exit(myapp.exec_())
+    try:
+        myapp = QApplication(sys.argv)
+        desktop = QApplication.desktop()
+        print(desktop.width() * 0.6, desktop.height() * 0.6)
+        main_win = MainWindow()
+        # myDlg.setFixedSize(desktop.width() * 0.6, desktop.height() * 0.6)
+        view = WebEngine()
+        channel = QWebChannel()
+        channel.registerObject('PyHandler', main_win)  # 将前端处理对象在前端页面中注册为名PyHandler对象，此对象在前端访问时名称即为PyHandler'
+        view.page().setWebChannel(channel)  # 挂载前端处理对象
+        url_string = urllib.request.pathname2url(os.path.join(os.getcwd(), "gaode.html"))  # 加载本地html文件
+        view.load(QUrl(url_string))
+        main_win.ui.horizontalLayout_6.addWidget(view)
+        main_win.view = view
+        main_win.setWindowOpacity(0.9)  # 设置窗口透明度
+        apply_stylesheet(myapp, theme='dark_teal.xml')
+        # myDlg.setWindowFlag(QtCore.Qt.FramelessWindowHint)  # 隐藏边框
+        # myDlg.setAttribute(QtCore.Qt.WA_TranslucentBackground)  # 设置窗口背景透明
+        # myDlg.setStyleSheet("#MainWindow{border-image:url(./statics/background.jpg);}")
+        main_win.show()
+        sys.exit(myapp.exec_())
+    except Exception as e:
+        print(e)

@@ -24,8 +24,10 @@ class DataDefine:
         # 客户端点击信息
         self.move_direction = config.MoveDirection.stop  # 运动方向
         self.move_mode = 1  # 运动模式上下左右与东南西北
-        self.lng_lat = None  # 经纬度
-        self.zoom = None  # 缩放等级
+        self.lng_lat = None  # 设备上传经纬度
+        self.zoom = None  # 设备上传缩放等级
+        self.click_lng_lat = None  # 点击经纬度
+        self.click_zoom = None  # 点击缩放等级
         self.home_lng_lat = None  # 返航点经纬度
         self.gaode_lng_lat = None  # 高德经纬度
         self.home_gaode_lng_lat = None  # 返航点高德经纬度
@@ -130,6 +132,8 @@ class DataDefine:
             # 舷灯 1 允许打开舷灯 没有该键或者0表示不打开
             "side_light": 0,
         }
+        # 地图对象
+        self.baidu_map_obj = None
 
     def update_direction(self, target_direction):
         self.move_direction = target_direction

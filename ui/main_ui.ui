@@ -505,7 +505,7 @@
     <property name="title">
      <string>关于</string>
     </property>
-    <addaction name="action"/>
+    <addaction name="about_author_action"/>
     <addaction name="separator"/>
    </widget>
    <addaction name="menu"/>
@@ -522,7 +522,7 @@
     <string>基础设置</string>
    </property>
   </action>
-  <action name="action">
+  <action name="about_author_action">
    <property name="text">
     <string>作者</string>
    </property>

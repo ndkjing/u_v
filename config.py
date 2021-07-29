@@ -1,7 +1,71 @@
 import enum
 import platform
 import os
+import os
 
+ship_code_list = [
+    '3c50f4c3-a9c1-4872-9f18-883af014380a',
+    '3c50f4c3-a9c1-4872-9f18-883af014380b',
+    '3c50f4c3-a9c1-4872-9f18-883af014380c',
+    '3c50f4c3-a9c1-4872-9f18-883af014380d',
+    '3c50f4c3-a9c1-4872-9f18-883af014380e',
+]
+print('config')
+root_path = os.path.dirname(os.path.abspath(__file__))
+save_img_dir = os.path.join(root_path, 'statics', 'imgs')
+maps_dir = os.path.join(root_path, 'statics', 'mapsData')
+if not os.path.exists(maps_dir):
+    if not os.path.exists(os.path.join(root_path, 'statics')):
+        os.mkdir(os.path.join(root_path, 'statics'))
+    os.mkdir(os.path.join(root_path, 'statics', 'mapsData'))
+print(save_img_dir,os.path.exists(save_img_dir))
+if not os.path.exists(save_img_dir):
+    print('创建目录',save_img_dir)
+    os.mkdir(save_img_dir)
+# 保存所有地图湖泊信息位置
+local_map_data_path = os.path.join(maps_dir, 'local_map.json')
+# 保存行驶路径和时间数据
+run_distance_time_path = os.path.join(root_path, 'statics', 'run_distance_time_path.json')
+base_setting_path = os.path.join(root_path, 'statics', 'configs', 'base_setting.json')
+base_setting_default_path = os.path.join(root_path, 'statics', 'configs', 'base_setting_default.json')
+height_setting_path = os.path.join(root_path, 'statics', 'configs', 'height_setting.json')
+height_setting_default_path = os.path.join(root_path, 'statics', 'configs', 'height_setting_default.json')
+# 保存湖号和路径数据
+save_plan_path = os.path.join(root_path, 'statics', 'configs', 'save_plan_path.json')
+# 保存声呐信息路径
+save_sonar_path = os.path.join(root_path, 'statics', 'geojeson_data.json')
+# 保存抓取的水质数据
+save_water_data_path = os.path.join(root_path, 'statics', 'water_data.json')
+# 保存返航点地址路径
+home_location_path = os.path.join(root_path, 'home_location.json')
+# 记录罗盘数据
+save_compass_data_dir = os.path.join(root_path, 'statics')
+pool_name = "梁子湖"
+b_use_path_planning = 1
+# 检测像素间隔
+pix_interval = 4
+# 构建地图单元格大小单位米
+cell_size = 1
+ship_code_video_dict = {
+    '3c50f4c3-a9c1-4872-9f18-883af014380a': 'https://open.ys7.com/v3/openlive/F77671789_1_2.m3u8?expire=1656031904&id=329906774170845184&t=edf269f932bc49f1bd29178401a3285d5e53fd311953fda4a00fd402ffcf0fbb&ev=100',
+    '3c50f4c3-a9c1-4872-9f18-883af014380b': 'https://open.ys7.com/v3/openlive/F77671789_1_2.m3u8?expire=1656031904&id=329906774170845184&t=edf269f932bc49f1bd29178401a3285d5e53fd311953fda4a00fd402ffcf0fbb&ev=100',
+    '3c50f4c3-a9c1-4872-9f18-883af014380c': 'https://open.ys7.com/v3/openlive/D50551834_1_2.m3u8?expire=1656031846&id=329906531464740864&t=f46ffbe870ee3cb6e078d333ed517132cad8752f8162868c6811e27ac9ec6a21&ev=100',
+    '3c50f4c3-a9c1-4872-9f18-883af014380d': 'https://open.ys7.com/v3/openlive/D50551834_1_2.m3u8?expire=1656031846&id=329906531464740864&t=f46ffbe870ee3cb6e078d333ed517132cad8752f8162868c6811e27ac9ec6a21&ev=100',
+    '3c50f4c3-a9c1-4872-9f18-883af014380e': 'https://open.ys7.com/v3/openlive/D50551834_1_2.m3u8?expire=1656031846&id=329906531464740864&t=f46ffbe870ee3cb6e078d333ed517132cad8752f8162868c6811e27ac9ec6a21&ev=100'
+}
+
+
+class MapType(enum.Enum):
+    """
+    地图类型
+    百度
+    高德
+    腾讯
+    """
+    baidu = 1
+    gaode = 2
+    tecent = 3
+# print('MapType',len(MapType))
 
 class ShipControlStatus(enum.Enum):
     """
@@ -11,12 +75,15 @@ class ShipControlStatus(enum.Enum):
     多点
     返航
     定点
+    找湖状态
     """
     hand_control = 1
     single_point = 2
     multi_points = 3
     backhome = 4
-    fix_point=5
+    fix_point = 5
+    find_pool = 6
+
 
 class MoveDirection(enum.Enum):
     forward = 0
@@ -28,6 +95,7 @@ class MoveDirection(enum.Enum):
     south = 6
     east = 7
     west = 8
+
 
 class CommunicationMethod(enum.Enum):
     lora = 0
@@ -198,5 +266,5 @@ topics = [('pool_click_%s' % ship_code, 0),
           ]
 
 video_src = 'rtmp://rtmp01open.ys7.com:1935/v3/openlive/D50551834_1_2?expire=1657329096&id' \
-                          '=335347591388602368&t=e1dd42835fd9bece1478d0d19d68b727dafbb8630d96a1272d65c3f389dd9bca&ev' \
-                          '=100 '
+            '=335347591388602368&t=e1dd42835fd9bece1478d0d19d68b727dafbb8630d96a1272d65c3f389dd9bca&ev' \
+            '=100 '

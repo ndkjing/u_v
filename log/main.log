@@ -393,3 +393,84 @@
 2021-07-28 18:07:03,373 start.py[line:396] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
 2021-07-28 18:07:08,475 start.py[line:368] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'stop_pwm': 1500, 'left_motor_cw': 1, 'right_motor_cw': 0, 'kp': 2.0, 'ki': 0.3, 'kd': 1.0, 'max_pwm': 1800, 'min_pwm': 1200, 'full_speed_meter': 6, 'check_status_interval': 1, 'check_network_interval': 10, 'draw_time': 5, 'home_debug': 1, 'b_play_audio': 0, 'path_track_type': 1, 'path_plan_type': 1, 'obstacle_avoid_type': 0, 'b_tsp': 0, 'network_backhome': 1, 'energy_backhome': 1, 'calibration_compass': 0, 'info_type': 2})
 2021-07-28 18:10:02,869 start.py[line:396] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:19:33,177 start.py[line:397] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:20:13,380 start.py[line:397] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:20:17,515 start.py[line:369] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'stop_pwm': 1500, 'left_motor_cw': 1, 'right_motor_cw': 0, 'kp': 2.0, 'ki': 0.3, 'kd': 1.0, 'max_pwm': 1800, 'min_pwm': 1200, 'full_speed_meter': 6, 'check_status_interval': 1, 'check_network_interval': 10, 'draw_time': 5, 'home_debug': 1, 'b_play_audio': 0, 'path_track_type': 1, 'path_plan_type': 1, 'obstacle_avoid_type': 0, 'b_tsp': 0, 'network_backhome': 1, 'energy_backhome': 1, 'calibration_compass': 0, 'info_type': 2})
+2021-07-29 08:20:58,532 start.py[line:397] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:21:01,774 start.py[line:372] INFO 没有改变高级设置数据
+2021-07-29 08:21:16,282 start.py[line:397] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:21:35,599 start.py[line:384] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:23:15,487 start.py[line:387] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:31:59,628 start.py[line:742] INFO {'gps data': '114.431114,30.524396,15'}
+2021-07-29 08:31:59,657 start.py[line:725] INFO window.add_marker('114.431114','30.524396')
+2021-07-29 08:32:14,758 start.py[line:742] INFO {'gps data': '114.431801,30.522067,15'}
+2021-07-29 08:32:14,776 start.py[line:725] INFO window.add_marker('114.431801','30.522067')
+2021-07-29 08:32:36,215 start.py[line:742] INFO {'gps data': '114.431329,30.520145,15'}
+2021-07-29 08:32:36,244 start.py[line:725] INFO window.add_marker('114.431329','30.520145')
+2021-07-29 08:34:10,710 start.py[line:742] INFO {'gps data': '114.431996,30.522083,15'}
+2021-07-29 08:34:10,721 start.py[line:725] INFO window.add_marker('114.431996','30.522083')
+2021-07-29 08:44:05,126 start.py[line:742] INFO {'gps data': '114.431558,30.524178,16'}
+2021-07-29 08:44:05,156 start.py[line:725] INFO window.add_marker('114.431558','30.524178')
+2021-07-29 08:45:19,424 start.py[line:742] INFO {'gps data': '114.430699,30.523957,15'}
+2021-07-29 08:45:19,446 start.py[line:725] INFO window.add_marker('114.430699','30.523957')
+2021-07-29 11:02:50,671 start.py[line:744] INFO {'gps data': '114.431438,30.524264,15'}
+2021-07-29 11:03:22,820 start.py[line:744] INFO {'gps data': '114.431652,30.522003,15'}
+2021-07-29 11:04:12,626 start.py[line:744] INFO {'gps data': '114.431381,30.522426,16'}
+2021-07-29 11:04:12,644 start.py[line:727] INFO window.add_marker('114.431381','30.522426')
+2021-07-29 11:04:12,656 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:07:10,039 start.py[line:744] INFO {'gps data': '114.431844,30.524571,15'}
+2021-07-29 11:07:10,057 start.py[line:727] INFO window.add_marker('114.431844','30.524571')
+2021-07-29 11:07:10,075 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:09:02,177 start.py[line:744] INFO {'gps data': '114.431627,30.52232,15'}
+2021-07-29 11:09:02,195 start.py[line:727] INFO window.add_marker('114.431627','30.522320')
+2021-07-29 11:09:02,212 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:09:59,529 start.py[line:744] INFO {'gps data': '114.431158,30.523923,15'}
+2021-07-29 11:09:59,553 start.py[line:727] INFO window.add_marker('114.431158','30.523923')
+2021-07-29 11:09:59,571 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:11:08,882 start.py[line:744] INFO {'gps data': '114.431438,30.524375,16'}
+2021-07-29 11:11:08,882 start.py[line:727] INFO window.add_marker('114.431438','30.524375')
+2021-07-29 11:11:08,883 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:11:18,642 start.py[line:744] INFO {'gps data': '114.420226,30.527629,14'}
+2021-07-29 11:11:18,660 start.py[line:727] INFO window.add_marker('114.420226','30.527629')
+2021-07-29 11:11:24,380 start.py[line:744] INFO {'gps data': '114.435332,30.537314,14'}
+2021-07-29 11:11:24,383 start.py[line:727] INFO window.add_marker('114.435332','30.537314')
+2021-07-29 11:11:25,453 start.py[line:744] INFO {'gps data': '114.442542,30.535392,14'}
+2021-07-29 11:11:25,471 start.py[line:727] INFO window.add_marker('114.442542','30.535392')
+2021-07-29 11:21:03,827 start.py[line:744] INFO {'gps data': '114.432189,30.521981,16'}
+2021-07-29 11:21:03,845 start.py[line:727] INFO window.add_marker('114.432189','30.521981')
+2021-07-29 11:21:03,863 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:21:07,184 start.py[line:744] INFO {'gps data': '114.430537,30.524458,15'}
+2021-07-29 11:21:07,185 start.py[line:727] INFO window.add_marker('114.430537','30.524458')
+2021-07-29 11:21:07,185 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:21:16,362 start.py[line:744] INFO {'gps data': '114.431309,30.521463,15'}
+2021-07-29 11:21:16,380 start.py[line:727] INFO window.add_marker('114.431309','30.521463')
+2021-07-29 11:21:16,390 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:22:10,065 start.py[line:638] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-29 11:22:26,977 start.py[line:744] INFO {'gps data': '114.431554,30.522412,15'}
+2021-07-29 11:22:26,994 start.py[line:727] INFO window.add_marker('114.431554','30.522412')
+2021-07-29 11:22:27,000 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:22:30,053 start.py[line:638] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-29 11:22:33,767 start.py[line:744] INFO {'gps data': '114.430782,30.521969,15'}
+2021-07-29 11:22:33,773 start.py[line:727] INFO window.add_marker('114.430782','30.521969')
+2021-07-29 11:22:33,773 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:22:48,793 start.py[line:744] INFO {'gps data': '114.432112,30.521303,15'}
+2021-07-29 11:22:48,794 start.py[line:727] INFO window.add_marker('114.432112','30.521303')
+2021-07-29 11:22:48,794 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:24:33,210 start.py[line:638] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-29 11:24:37,525 start.py[line:744] INFO {'gps data': '114.431183,30.524198,15'}
+2021-07-29 11:24:37,542 start.py[line:727] INFO window.add_marker('114.431183','30.524198')
+2021-07-29 11:24:37,582 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:24:40,863 start.py[line:744] INFO {'gps data': '114.431376,30.522053,15'}
+2021-07-29 11:24:40,881 start.py[line:727] INFO window.add_marker('114.431376','30.522053')
+2021-07-29 11:24:40,905 start.py[line:788] INFO (' path_planning_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': 'asd2312', 'mapId': '12321', 'sampling_points': [[114.431376, 30.522053]], 'path_points': [[114.431376, 30.522053]], 'path_id': 1})
+2021-07-29 11:25:44,031 start.py[line:744] INFO {'gps data': '114.431352,30.522711,15'}
+2021-07-29 11:25:44,032 start.py[line:727] INFO window.add_marker('114.431352','30.522711')
+2021-07-29 11:25:44,033 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:25:46,292 start.py[line:744] INFO {'gps data': '114.431288,30.521565,15'}
+2021-07-29 11:25:46,310 start.py[line:727] INFO window.add_marker('114.431288','30.521565')
+2021-07-29 11:25:51,465 start.py[line:744] INFO {'gps data': '114.432661,30.521639,15'}
+2021-07-29 11:25:51,475 start.py[line:727] INFO window.add_marker('114.432661','30.521639')
+2021-07-29 11:25:54,596 start.py[line:638] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-29 11:25:55,407 start.py[line:744] INFO {'gps data': '114.431588,30.519938,15'}
+2021-07-29 11:25:55,408 start.py[line:727] INFO window.add_marker('114.431588','30.519938')
+2021-07-29 11:25:55,409 start.py[line:788] INFO ('path_planning_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': 'asd2312', 'mapId': '12321', 'sampling_points': [[114.431588, 30.519938]], 'path_points': [[114.431588, 30.519938]], 'path_id': 1})
