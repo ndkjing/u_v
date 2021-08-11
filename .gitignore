@@ -1,3 +1,5 @@
 build/
 build/*
 log/
+__pychche__/
+__pychche__/*
