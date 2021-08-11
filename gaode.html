@@ -50,22 +50,24 @@
     //为地图注册click事件获取鼠标点击出的经纬度坐标
     map.on('click', function(e) {
         var zoom = map.getZoom(); //获取当前地图级别
-        var lng_lat = e.lnglat.getLng() + ',' + e.lnglat.getLat()+','+zoom;
+        var lng_lat_zoom = e.lnglat.getLng() + ',' + e.lnglat.getLat()+','+zoom;
         document.getElementById("lnglat").value = e.lnglat.getLng() + ',' + e.lnglat.getLat()+','+zoom;
-        window.PyHandler.send_lng_lat(lng_lat)
+        window.PyHandler.send_lng_lat(lng_lat_zoom)
     });
     //设置中心点
     window.set_zoom_and_center = function (zoom,lng,lat) {
         document.getElementById("lnglat").value = zoom;
         map.setZoomAndCenter(zoom, [lng, lat]); //同时设置地图层级与中心点
     }
-    //绘制点
+    //绘制线
     window.add_line = function (line_list) {
-        var lineArr = [[114.144539, 30.492879],
-            [114.153809, 30.490808],
-            [114.153809, 30.500808]];
+        var arr=eval(line_list);
+        // var lineArr = [[114.144539, 30.492879],
+        //     [114.153809, 30.490808],
+        //     [114.153809, 30.500808]];
+
     var polyline = new AMap.Polyline({
-        path: lineArr,          //设置线覆盖物路径
+        path: arr,          //设置线覆盖物路径
         strokeColor: "#3366FF", //线颜色
         strokeWeight: 5,        //线宽
         strokeStyle: "solid",   //线样式
@@ -73,7 +75,7 @@
     map.add(polyline);
 }
 
-    //绘制线
+    //绘制点
     window.add_marker = function (lng,lat) {
     var marker = new AMap.Marker({
             position:[lng, lat]//位置

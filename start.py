@@ -3,6 +3,7 @@
 入口函数
 """
 import sys
+import json
 import os
 import time
 import cv2
@@ -272,7 +273,7 @@ class MainWindow(QMainWindow):
     # 绑定信号连接
     def init_signal_slot(self):
         # 测试使用
-        # self.ui.forward_button.clicked.connect(self.map_add_line)
+        self.ui.forward_button.clicked.connect(self.map_add_line)
         # 刷新页面
         self.ui.reload_button.clicked.connect(self.reload_view)
         # 重选湖泊
@@ -757,13 +758,18 @@ class MainWindow(QMainWindow):
         view.page().runJavaScript(str_command)
 
     # 在地图上连线
-    def map_add_line(self):
-        line_list = [
-            [114.144539, 30.492879],
+    def map_add_line(self,lng_lat_data:list):
+        """
+        :param lng_lat_data:二位数组经纬度
+        lng_lat_data = [
+            [110.144539, 30.492879],
             [114.153809, 30.490808],
             [114.153809, 30.500808]
         ]
-        str_command = "window.add_line(line_list)"
+        :return: 无 在地图上绘制数据
+        """
+        json_lng_lat_data = json.dumps(lng_lat_data)
+        str_command = "window.add_line(%s)"%json_lng_lat_data
         logger.info(str_command)
         view.page().runJavaScript(str_command)
 
@@ -796,6 +802,8 @@ class MainWindow(QMainWindow):
                 # self.data_manager_obj.send_data(msg=msg)
                 # 查找湖泊
                 self.data_manager_obj.find_pool()
+                if self.data_manager_obj.data_obj.pool_code is not None:
+                    self.map_add_line(self.data_manager_obj.data_obj.baidu_map_obj.pool_lng_lats)
             # 已经找到后标记为添加目标点
             else:
                 if self.data_obj.control_mode == config.ShipControlStatus.single_point:

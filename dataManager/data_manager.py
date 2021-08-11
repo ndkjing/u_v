@@ -117,6 +117,7 @@ class DataManager:
                     config.pool_name = self.data_obj.baidu_map_obj.pool_name
                 else:
                     config.pool_name = self.data_obj.baidu_map_obj.address
+
                 self.logger.info({'config.pool_name': config.pool_name})
                 # 判断当前湖泊是否曾经出现，出现过则获取的ID 没出现过发送请求获取新ID
                 if isinstance(self.data_obj.baidu_map_obj.pool_cnts, np.ndarray):
