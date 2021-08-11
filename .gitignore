@@ -1,6 +1,6 @@
+.build
+.build/
 build/
 build/*
-log/
-__pychche__/
-__pychche__/*
-*/__pychche__/*
+.idea
+.idea/*

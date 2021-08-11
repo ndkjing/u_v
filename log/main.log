@@ -1,2 +1,476 @@
-2021-08-11 17:28:09,740 start.py[line:372] INFO {'gps data': '116.645281,35.240744,11'}
-2021-08-11 17:28:09,750 start.py[line:355] INFO window.add_marker('116.645281','35.240744')
+2021-07-26 14:24:07,280 start.py[line:98] INFO {'gps data': '114.284839,30.632815,9'}
+2021-07-26 14:24:08,323 start.py[line:98] INFO {'gps data': '114.479846,30.602087,9'}
+2021-07-26 14:24:10,027 start.py[line:98] INFO {'gps data': '110.883181,32.066014,5'}
+2021-07-26 14:24:11,120 start.py[line:98] INFO {'gps data': '117.562868,33.543419,5'}
+2021-07-26 16:22:01,977 start.py[line:98] INFO {'gps data': '114.301319,30.61627,9'}
+2021-07-26 16:22:02,942 start.py[line:98] INFO {'gps data': '114.15575,30.739105,9'}
+2021-07-26 16:22:05,519 start.py[line:98] INFO {'gps data': '114.765491,30.821694,9'}
+2021-07-26 16:22:45,224 start.py[line:98] INFO {'gps data': '114.207935,30.677707,9'}
+2021-07-26 16:22:46,019 start.py[line:98] INFO {'gps data': '114.56499,30.66117,9'}
+2021-07-27 10:59:27,007 start.py[line:119] INFO {'gps data': '115.608692,30.502746,9'}
+2021-07-27 10:59:46,323 start.py[line:119] INFO {'gps data': '112.392444,30.476711,9'}
+2021-07-27 11:00:06,608 start.py[line:119] INFO {'gps data': '113.911304,30.585537,9'}
+2021-07-27 11:00:08,503 start.py[line:119] INFO {'gps data': '112.507801,30.765069,9'}
+2021-07-27 11:00:10,222 start.py[line:119] INFO {'gps data': '112.392444,30.542968,9'}
+2021-07-27 11:13:05,474 start.py[line:86] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:13:20,030 start.py[line:86] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:14:51,123 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:14:52,955 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:14:56,311 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:15:01,256 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:15:02,779 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:15:04,243 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:15:04,901 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:15:05,278 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:15:06,344 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:15:07,059 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.fix_point: 5>}
+2021-07-27 11:15:07,935 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.fix_point: 5>}
+2021-07-27 11:15:10,519 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:15:11,123 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:15:11,427 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:15:12,188 start.py[line:92] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:16:02,528 start.py[line:93] INFO {'self.data_obj.control_mode': <ShipControlStatus.fix_point: 5>}
+2021-07-27 11:16:05,048 start.py[line:93] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:16:07,423 start.py[line:93] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:16:08,312 start.py[line:93] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:18:57,685 start.py[line:90] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:18:58,375 start.py[line:90] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:18:59,466 start.py[line:90] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:18:59,909 start.py[line:90] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:19:02,654 start.py[line:90] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:19:03,673 start.py[line:90] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:19:04,431 start.py[line:90] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:19:05,626 start.py[line:90] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:20:41,603 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:20:42,346 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:20:55,915 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:20:57,515 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:21:01,201 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:21:02,099 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:21:03,035 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:04,779 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:05,481 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:08,458 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:09,541 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:10,531 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:10,735 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:10,919 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:11,095 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:12,739 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:12,918 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:13,089 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:15,540 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:21:16,811 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:21:20,908 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:21:22,068 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:23:32,785 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:23:33,610 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:23:34,294 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:23:34,937 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:23:36,565 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:23:38,613 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:23:41,978 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:00,105 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:24:01,209 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:08,945 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:24:10,357 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:24:11,120 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:24:11,844 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:24:12,891 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:13,586 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:13,890 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:14,371 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:14,549 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:14,782 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:15,637 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:15,825 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:16,013 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:16,193 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:16,349 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:54,557 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:24:56,686 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:24:59,394 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:25:01,875 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:25:03,026 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:25:04,674 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:25:23,039 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:25:23,798 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:25:24,441 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:25:40,598 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:25:42,562 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:25:44,871 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:25:45,771 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:26:22,195 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:26:22,786 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:26:26,457 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:26:29,791 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:26:30,783 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:26:31,868 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:26:33,859 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:26:40,843 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:26:42,292 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:26:44,728 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:26:46,059 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:26:49,442 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:26:50,755 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:26:51,723 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:26:53,004 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:26:54,844 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:26:56,174 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:26:56,895 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:26:57,739 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:26:58,355 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:26:59,197 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:26:59,768 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:27:00,302 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:27:02,245 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.fix_point: 5>}
+2021-07-27 11:27:02,952 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.fix_point: 5>}
+2021-07-27 11:28:39,914 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:28:40,545 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:28:43,280 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:28:45,597 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:28:46,697 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:28:47,972 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:28:52,806 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:28:53,590 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:28:58,516 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:28:59,364 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:29:00,104 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:29:01,144 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:29:02,300 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:29:06,580 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:29:08,364 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:29:09,781 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:29:29,767 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:29:30,389 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:29:33,451 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:29:34,692 start.py[line:94] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:33:07,363 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:33:07,947 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:33:09,175 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:33:29,642 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:33:30,439 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:33:31,436 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:33:31,953 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:33:32,615 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:33:34,671 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:33:36,676 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:33:37,292 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:33:38,339 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:33:42,480 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:33:43,672 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:34:00,988 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.fix_point: 5>}
+2021-07-27 11:34:02,772 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:34:04,042 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.backhome: 4>}
+2021-07-27 11:34:04,820 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:34:05,885 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:34:06,464 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:34:16,632 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 11:34:17,852 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 11:34:19,928 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 11:34:21,595 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.multi_points: 3>}
+2021-07-27 13:01:35,716 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 13:01:36,144 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 13:01:37,978 start.py[line:101] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 13:10:54,285 start.py[line:167] INFO {'gps data': '114.438437,30.536086,13'}
+2021-07-27 13:11:29,320 start.py[line:100] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 13:11:31,981 start.py[line:167] INFO {'gps data': '114.44084,30.537861,13'}
+2021-07-27 13:13:45,278 start.py[line:100] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 13:13:48,384 start.py[line:167] INFO {'gps data': '114.383675,30.542264,15'}
+2021-07-27 13:14:22,269 start.py[line:100] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 13:14:22,943 start.py[line:167] INFO {'gps data': '114.13103,30.535871,9'}
+2021-07-27 13:14:24,298 start.py[line:167] INFO {'gps data': '114.078845,30.448302,9'}
+2021-07-27 13:15:08,868 start.py[line:167] INFO {'gps data': '114.029407,30.379612,9'}
+2021-07-27 13:15:10,378 start.py[line:167] INFO {'gps data': '114.499072,30.419884,9'}
+2021-07-27 13:15:11,324 start.py[line:167] INFO {'gps data': '114.551258,30.372503,9'}
+2021-07-27 13:15:13,723 start.py[line:167] INFO {'gps data': '114.57323,30.389089,9'}
+2021-07-27 13:15:14,867 start.py[line:167] INFO {'gps data': '114.413928,30.535871,9'}
+2021-07-27 13:30:28,126 start.py[line:181] INFO {'gps data': '114.144763,30.495646,9'}
+2021-07-27 13:30:30,520 start.py[line:114] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 13:30:31,721 start.py[line:181] INFO {'gps data': '114.111804,30.436462,9'}
+2021-07-27 13:31:11,221 start.py[line:181] INFO {'gps data': '114.707813,30.698964,9'}
+2021-07-27 13:31:24,825 start.py[line:181] INFO {'gps data': '114.431567,30.521491,15'}
+2021-07-27 14:07:37,169 start.py[line:114] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:07:41,064 start.py[line:114] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:07:42,693 start.py[line:114] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:07:43,596 start.py[line:114] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:07:45,868 start.py[line:114] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:07:47,676 start.py[line:114] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:19:12,174 start.py[line:204] INFO {'gps data': '114.281169,30.59795,13'}
+2021-07-27 14:19:13,497 start.py[line:191] INFO window.add_marker('114.281169','30.597950')
+2021-07-27 14:19:13,498 start.py[line:117] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:19:24,853 start.py[line:204] INFO {'gps data': '114.284259,30.591891,12'}
+2021-07-27 14:21:03,083 start.py[line:204] INFO {'gps data': '114.333591,30.556568,11'}
+2021-07-27 14:21:05,635 start.py[line:204] INFO {'gps data': '114.336681,30.565881,14'}
+2021-07-27 14:21:07,186 start.py[line:204] INFO {'gps data': '114.332046,30.567433,14'}
+2021-07-27 14:21:07,798 start.py[line:204] INFO {'gps data': '114.326896,30.56322,14'}
+2021-07-27 14:21:09,190 start.py[line:204] INFO {'gps data': '114.337625,30.566029,14'}
+2021-07-27 14:21:09,874 start.py[line:204] INFO {'gps data': '114.330759,30.568541,14'}
+2021-07-27 14:21:11,973 start.py[line:191] INFO window.add_marker('114.330759','30.568541')
+2021-07-27 14:21:11,974 start.py[line:117] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:21:31,766 start.py[line:191] INFO window.add_marker('114.330759','30.568541')
+2021-07-27 14:21:31,767 start.py[line:117] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:23:11,833 start.py[line:204] INFO {'gps data': '114.020128,30.485556,16'}
+2021-07-27 14:23:12,643 start.py[line:191] INFO window.add_marker('114.020128','30.485556')
+2021-07-27 14:23:12,644 start.py[line:117] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:23:16,649 start.py[line:204] INFO {'gps data': '114.110894,30.480157,12'}
+2021-07-27 14:23:18,104 start.py[line:191] INFO window.add_marker('114.110894','30.480157')
+2021-07-27 14:23:18,104 start.py[line:117] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:23:21,729 start.py[line:204] INFO {'gps data': '114.144539,30.492879,12'}
+2021-07-27 14:23:22,968 start.py[line:204] INFO {'gps data': '114.153809,30.490808,12'}
+2021-07-27 14:23:23,982 start.py[line:191] INFO window.add_marker('114.153809','30.490808')
+2021-07-27 14:23:23,982 start.py[line:117] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:25:11,051 start.py[line:203] INFO {'gps data': '113.986835,30.408041,10'}
+2021-07-27 14:25:12,972 start.py[line:191] INFO window.add_marker('113.986835','30.408041')
+2021-07-27 14:25:12,973 start.py[line:197] INFO window.add_line()
+2021-07-27 14:25:12,974 start.py[line:117] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:26:00,458 start.py[line:203] INFO {'gps data': '114.471607,30.849993,8'}
+2021-07-27 14:26:01,122 start.py[line:203] INFO {'gps data': '114.537525,30.887714,8'}
+2021-07-27 14:28:33,965 start.py[line:207] INFO {'gps data': '113.971729,30.403304,9'}
+2021-07-27 14:28:34,909 start.py[line:195] INFO window.add_marker('113.971729','30.403304')
+2021-07-27 14:28:34,910 start.py[line:201] INFO window.add_line()
+2021-07-27 14:28:34,910 start.py[line:121] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:28:35,433 start.py[line:207] INFO {'gps data': '113.828906,30.320358,9'}
+2021-07-27 14:28:37,319 start.py[line:195] INFO window.add_marker('113.828906','30.320358')
+2021-07-27 14:28:37,319 start.py[line:201] INFO window.add_line()
+2021-07-27 14:28:37,319 start.py[line:121] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:28:37,875 start.py[line:207] INFO {'gps data': '113.968982,30.353544,9'}
+2021-07-27 14:28:38,644 start.py[line:195] INFO window.add_marker('113.968982','30.353544')
+2021-07-27 14:28:38,644 start.py[line:201] INFO window.add_line()
+2021-07-27 14:28:38,644 start.py[line:121] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:28:39,235 start.py[line:121] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 14:51:41,888 start.py[line:224] INFO {'gps data': '114.386291,30.551516,13'}
+2021-07-27 15:51:59,320 start.py[line:315] INFO {'gps data': '114.282093,30.604451,9'}
+2021-07-27 15:51:59,959 start.py[line:315] INFO {'gps data': '114.216175,30.542968,9'}
+2021-07-27 15:52:01,932 start.py[line:315] INFO {'gps data': '114.181842,30.496238,11'}
+2021-07-27 15:52:05,167 start.py[line:315] INFO {'gps data': '114.220123,30.513986,13'}
+2021-07-27 15:52:07,887 start.py[line:315] INFO {'gps data': '114.221153,30.514134,13'}
+2021-07-27 15:52:08,717 start.py[line:224] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 15:52:59,553 start.py[line:314] INFO {'gps data': '114.419422,30.55716,9'}
+2021-07-27 15:53:39,872 start.py[line:314] INFO {'gps data': '114.435332,30.477195,13'}
+2021-07-27 15:54:06,889 start.py[line:314] INFO {'gps data': '114.537181,30.55036,12'}
+2021-07-27 15:54:35,360 start.py[line:314] INFO {'gps data': '114.373134,30.433502,11'}
+2021-07-27 15:54:35,360 start.py[line:297] INFO window.add_marker('114.373134','30.433502')
+2021-07-27 15:54:37,912 start.py[line:314] INFO {'gps data': '114.438899,30.44076,11'}
+2021-07-27 15:54:37,950 start.py[line:297] INFO window.add_marker('114.438899','30.440760')
+2021-07-27 15:54:39,165 start.py[line:314] INFO {'gps data': '114.443019,30.480415,11'}
+2021-07-27 15:54:39,189 start.py[line:297] INFO window.add_marker('114.443019','30.480415')
+2021-07-27 17:07:58,765 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:00,075 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:00,526 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:00,981 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:03,490 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:08,231 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:08:09,158 start.py[line:231] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 17:09:00,210 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:03,498 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:04,706 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:05,350 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:05,546 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 17:09:05,738 start.py[line:232] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:36,061 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:36,799 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:37,477 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:37,810 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 18:05:38,262 start.py[line:229] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-27 19:19:58,937 start.py[line:329] INFO {'gps data': '115.533363,39.797013,7'}
+2021-07-27 19:19:58,942 start.py[line:312] INFO window.add_marker('115.533363','39.797013')
+2021-07-27 19:19:59,778 start.py[line:329] INFO {'gps data': '114.962074,39.712551,7'}
+2021-07-27 19:19:59,805 start.py[line:312] INFO window.add_marker('114.962074','39.712551')
+2021-07-27 19:20:07,272 start.py[line:329] INFO {'gps data': '115.831797,39.905078,14'}
+2021-07-27 19:20:07,272 start.py[line:312] INFO window.add_marker('115.831797','39.905078')
+2021-07-27 19:32:35,008 start.py[line:256] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-27 19:45:51,870 start.py[line:353] INFO {'gps data': '117.011025,40.502395,7'}
+2021-07-27 19:45:51,876 start.py[line:336] INFO window.add_marker('117.011025','40.502395')
+2021-07-28 15:15:34,156 start.py[line:339] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-28 15:15:39,320 start.py[line:339] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-28 15:15:40,456 start.py[line:339] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-28 15:15:42,094 start.py[line:339] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-28 15:16:31,662 start.py[line:412] INFO ('control_data_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'mode': 1, 'move_direction': 0})
+2021-07-28 15:16:31,671 start.py[line:339] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-28 15:16:37,374 start.py[line:412] INFO ('control_data_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'mode': 2, 'move_direction': 90})
+2021-07-28 15:16:37,406 start.py[line:339] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-28 15:16:38,801 start.py[line:412] INFO ('control_data_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'mode': 2, 'move_direction': 270})
+2021-07-28 15:16:38,805 start.py[line:339] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-28 15:16:39,126 start.py[line:412] INFO ('control_data_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'mode': 2, 'move_direction': 180})
+2021-07-28 15:16:39,144 start.py[line:339] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-28 15:16:39,394 start.py[line:412] INFO ('control_data_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'mode': 2, 'move_direction': -1})
+2021-07-28 15:16:39,394 start.py[line:339] INFO {'self.data_obj.control_mode': <ShipControlStatus.hand_control: 1>}
+2021-07-28 15:27:14,313 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:16,346 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 1, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:16,777 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:17,101 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 1})
+2021-07-28 15:27:17,444 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 1, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:17,729 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 1})
+2021-07-28 15:27:18,012 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:18,365 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:22,625 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:23,678 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:24,821 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:26,861 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:27,993 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:28,945 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:29,745 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:33,606 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 1, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:35,098 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 1, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:41,045 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:27:42,974 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 1})
+2021-07-28 15:27:48,638 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:28:00,054 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:28:00,994 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:28:02,083 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:28:02,655 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:28:03,358 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:28:03,999 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 1})
+2021-07-28 15:28:46,378 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:28:47,599 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:45,163 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:46,001 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:48,567 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:49,333 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:50,155 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:52,165 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:53,425 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:54,496 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:58,795 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 1, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:29:59,612 start.py[line:196] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 1, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:02,348 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:03,581 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:04,751 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:05,344 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:06,468 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 1, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:07,040 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:07,992 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 1, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:08,641 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:09,153 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 1})
+2021-07-28 15:32:09,788 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:10,397 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 1})
+2021-07-28 15:32:11,200 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:13,177 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:14,829 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 1})
+2021-07-28 15:32:17,233 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 1, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 15:32:18,601 start.py[line:183] INFO ('switch_3c50f4c3-a9c1-4872-9f18-883af014380c', {'b_sampling': 0, 'b_drain': 0, 'b_draw': 0, 'headlight': 0, 'audio_light': 0, 'side_light': 0})
+2021-07-28 16:07:59,511 start.py[line:252] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:09:26,041 start.py[line:252] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:13:53,881 start.py[line:252] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:14:52,733 start.py[line:252] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:16:37,979 start.py[line:252] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:16:57,800 start.py[line:265] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:20:17,393 start.py[line:252] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:20:33,797 start.py[line:265] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:21:12,593 start.py[line:252] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:21:20,923 start.py[line:265] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:30:59,115 start.py[line:265] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:32:06,989 start.py[line:265] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:41:46,337 start.py[line:265] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 16:53:05,643 start.py[line:265] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:00:32,359 start.py[line:265] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:03:29,601 start.py[line:253] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:04:47,819 start.py[line:270] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:09:56,119 start.py[line:289] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:14:47,168 start.py[line:294] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:26:30,557 start.py[line:333] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:26:33,963 start.py[line:317] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'arrive_range': '2.5', 'speed_grade': 5, 'secure_distance': '5', 'row': '50', 'keep_point': '5'})
+2021-07-28 17:30:07,779 start.py[line:339] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:30:11,194 start.py[line:321] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'arrive_range': 2.5, 'speed_grade': 5, 'secure_distance': 5, 'row': 50, 'keep_point': 5})
+2021-07-28 17:30:39,831 start.py[line:340] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:30:42,230 start.py[line:322] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'arrive_range': 2.5, 'speed_grade': 5, 'secure_distance': 5, 'row': 50, 'keep_point': 5})
+2021-07-28 17:31:22,732 start.py[line:340] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:31:26,315 start.py[line:325] INFO 没有改变基础设置数据
+2021-07-28 17:31:31,771 start.py[line:340] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:31:36,850 start.py[line:322] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'arrive_range': 3.5, 'speed_grade': 5, 'secure_distance': 5, 'row': 50, 'keep_point': 5})
+2021-07-28 17:32:08,278 start.py[line:340] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:32:13,624 start.py[line:325] INFO 没有改变基础设置数据
+2021-07-28 17:32:23,691 start.py[line:340] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:32:29,345 start.py[line:322] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'arrive_range': 3.0, 'speed_grade': 5, 'secure_distance': 5, 'row': 50, 'keep_point': 5})
+2021-07-28 17:41:49,608 start.py[line:340] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 17:41:54,062 start.py[line:322] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'arrive_range': 3.0, 'speed_grade': 5, 'secure_distance': 5, 'row': 50, 'keep_point': 5})
+2021-07-28 17:59:31,318 start.py[line:382] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 18:03:41,314 start.py[line:396] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 18:03:45,542 start.py[line:368] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'stop_pwm': 1500, 'left_motor_cw': 1, 'right_motor_cw': 0, 'kp': 2.0, 'ki': 0.0, 'kd': 1.0, 'max_pwm': 1800, 'min_pwm': 1200, 'full_speed_meter': 6, 'check_status_interval': 1, 'check_network_interval': 10, 'draw_time': 5, 'home_debug': 1, 'b_play_audio': 0, 'path_track_type': 1, 'path_plan_type': 1, 'obstacle_avoid_type': 0, 'b_tsp': 0, 'network_backhome': 1, 'energy_backhome': 1, 'calibration_compass': 0, 'info_type': 2})
+2021-07-28 18:05:21,245 start.py[line:396] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 18:05:35,858 start.py[line:368] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'stop_pwm': 1500, 'left_motor_cw': 1, 'right_motor_cw': 0, 'kp': 2.0, 'ki': 0.0, 'kd': 1.0, 'max_pwm': 1800, 'min_pwm': 1200, 'full_speed_meter': 6, 'check_status_interval': 1, 'check_network_interval': 10, 'draw_time': 5, 'home_debug': 1, 'b_play_audio': 0, 'path_track_type': 1, 'path_plan_type': 1, 'obstacle_avoid_type': 0, 'b_tsp': 0, 'network_backhome': 1, 'energy_backhome': 1, 'calibration_compass': 0, 'info_type': 2})
+2021-07-28 18:07:03,373 start.py[line:396] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-28 18:07:08,475 start.py[line:368] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'stop_pwm': 1500, 'left_motor_cw': 1, 'right_motor_cw': 0, 'kp': 2.0, 'ki': 0.3, 'kd': 1.0, 'max_pwm': 1800, 'min_pwm': 1200, 'full_speed_meter': 6, 'check_status_interval': 1, 'check_network_interval': 10, 'draw_time': 5, 'home_debug': 1, 'b_play_audio': 0, 'path_track_type': 1, 'path_plan_type': 1, 'obstacle_avoid_type': 0, 'b_tsp': 0, 'network_backhome': 1, 'energy_backhome': 1, 'calibration_compass': 0, 'info_type': 2})
+2021-07-28 18:10:02,869 start.py[line:396] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:19:33,177 start.py[line:397] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:20:13,380 start.py[line:397] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:20:17,515 start.py[line:369] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'stop_pwm': 1500, 'left_motor_cw': 1, 'right_motor_cw': 0, 'kp': 2.0, 'ki': 0.3, 'kd': 1.0, 'max_pwm': 1800, 'min_pwm': 1200, 'full_speed_meter': 6, 'check_status_interval': 1, 'check_network_interval': 10, 'draw_time': 5, 'home_debug': 1, 'b_play_audio': 0, 'path_track_type': 1, 'path_plan_type': 1, 'obstacle_avoid_type': 0, 'b_tsp': 0, 'network_backhome': 1, 'energy_backhome': 1, 'calibration_compass': 0, 'info_type': 2})
+2021-07-29 08:20:58,532 start.py[line:397] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:21:01,774 start.py[line:372] INFO 没有改变高级设置数据
+2021-07-29 08:21:16,282 start.py[line:397] INFO ('height_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:21:35,599 start.py[line:384] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:23:15,487 start.py[line:387] INFO ('base_setting_3c50f4c3-a9c1-4872-9f18-883af014380c', {'info_type': 1})
+2021-07-29 08:31:59,628 start.py[line:742] INFO {'gps data': '114.431114,30.524396,15'}
+2021-07-29 08:31:59,657 start.py[line:725] INFO window.add_marker('114.431114','30.524396')
+2021-07-29 08:32:14,758 start.py[line:742] INFO {'gps data': '114.431801,30.522067,15'}
+2021-07-29 08:32:14,776 start.py[line:725] INFO window.add_marker('114.431801','30.522067')
+2021-07-29 08:32:36,215 start.py[line:742] INFO {'gps data': '114.431329,30.520145,15'}
+2021-07-29 08:32:36,244 start.py[line:725] INFO window.add_marker('114.431329','30.520145')
+2021-07-29 08:34:10,710 start.py[line:742] INFO {'gps data': '114.431996,30.522083,15'}
+2021-07-29 08:34:10,721 start.py[line:725] INFO window.add_marker('114.431996','30.522083')
+2021-07-29 08:44:05,126 start.py[line:742] INFO {'gps data': '114.431558,30.524178,16'}
+2021-07-29 08:44:05,156 start.py[line:725] INFO window.add_marker('114.431558','30.524178')
+2021-07-29 08:45:19,424 start.py[line:742] INFO {'gps data': '114.430699,30.523957,15'}
+2021-07-29 08:45:19,446 start.py[line:725] INFO window.add_marker('114.430699','30.523957')
+2021-07-29 11:02:50,671 start.py[line:744] INFO {'gps data': '114.431438,30.524264,15'}
+2021-07-29 11:03:22,820 start.py[line:744] INFO {'gps data': '114.431652,30.522003,15'}
+2021-07-29 11:04:12,626 start.py[line:744] INFO {'gps data': '114.431381,30.522426,16'}
+2021-07-29 11:04:12,644 start.py[line:727] INFO window.add_marker('114.431381','30.522426')
+2021-07-29 11:04:12,656 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:07:10,039 start.py[line:744] INFO {'gps data': '114.431844,30.524571,15'}
+2021-07-29 11:07:10,057 start.py[line:727] INFO window.add_marker('114.431844','30.524571')
+2021-07-29 11:07:10,075 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:09:02,177 start.py[line:744] INFO {'gps data': '114.431627,30.52232,15'}
+2021-07-29 11:09:02,195 start.py[line:727] INFO window.add_marker('114.431627','30.522320')
+2021-07-29 11:09:02,212 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:09:59,529 start.py[line:744] INFO {'gps data': '114.431158,30.523923,15'}
+2021-07-29 11:09:59,553 start.py[line:727] INFO window.add_marker('114.431158','30.523923')
+2021-07-29 11:09:59,571 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:11:08,882 start.py[line:744] INFO {'gps data': '114.431438,30.524375,16'}
+2021-07-29 11:11:08,882 start.py[line:727] INFO window.add_marker('114.431438','30.524375')
+2021-07-29 11:11:08,883 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:11:18,642 start.py[line:744] INFO {'gps data': '114.420226,30.527629,14'}
+2021-07-29 11:11:18,660 start.py[line:727] INFO window.add_marker('114.420226','30.527629')
+2021-07-29 11:11:24,380 start.py[line:744] INFO {'gps data': '114.435332,30.537314,14'}
+2021-07-29 11:11:24,383 start.py[line:727] INFO window.add_marker('114.435332','30.537314')
+2021-07-29 11:11:25,453 start.py[line:744] INFO {'gps data': '114.442542,30.535392,14'}
+2021-07-29 11:11:25,471 start.py[line:727] INFO window.add_marker('114.442542','30.535392')
+2021-07-29 11:21:03,827 start.py[line:744] INFO {'gps data': '114.432189,30.521981,16'}
+2021-07-29 11:21:03,845 start.py[line:727] INFO window.add_marker('114.432189','30.521981')
+2021-07-29 11:21:03,863 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:21:07,184 start.py[line:744] INFO {'gps data': '114.430537,30.524458,15'}
+2021-07-29 11:21:07,185 start.py[line:727] INFO window.add_marker('114.430537','30.524458')
+2021-07-29 11:21:07,185 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:21:16,362 start.py[line:744] INFO {'gps data': '114.431309,30.521463,15'}
+2021-07-29 11:21:16,380 start.py[line:727] INFO window.add_marker('114.431309','30.521463')
+2021-07-29 11:21:16,390 start.py[line:765] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:22:10,065 start.py[line:638] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-29 11:22:26,977 start.py[line:744] INFO {'gps data': '114.431554,30.522412,15'}
+2021-07-29 11:22:26,994 start.py[line:727] INFO window.add_marker('114.431554','30.522412')
+2021-07-29 11:22:27,000 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:22:30,053 start.py[line:638] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-29 11:22:33,767 start.py[line:744] INFO {'gps data': '114.430782,30.521969,15'}
+2021-07-29 11:22:33,773 start.py[line:727] INFO window.add_marker('114.430782','30.521969')
+2021-07-29 11:22:33,773 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:22:48,793 start.py[line:744] INFO {'gps data': '114.432112,30.521303,15'}
+2021-07-29 11:22:48,794 start.py[line:727] INFO window.add_marker('114.432112','30.521303')
+2021-07-29 11:22:48,794 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:24:33,210 start.py[line:638] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-29 11:24:37,525 start.py[line:744] INFO {'gps data': '114.431183,30.524198,15'}
+2021-07-29 11:24:37,542 start.py[line:727] INFO window.add_marker('114.431183','30.524198')
+2021-07-29 11:24:37,582 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:24:40,863 start.py[line:744] INFO {'gps data': '114.431376,30.522053,15'}
+2021-07-29 11:24:40,881 start.py[line:727] INFO window.add_marker('114.431376','30.522053')
+2021-07-29 11:24:40,905 start.py[line:788] INFO (' path_planning_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': 'asd2312', 'mapId': '12321', 'sampling_points': [[114.431376, 30.522053]], 'path_points': [[114.431376, 30.522053]], 'path_id': 1})
+2021-07-29 11:25:44,031 start.py[line:744] INFO {'gps data': '114.431352,30.522711,15'}
+2021-07-29 11:25:44,032 start.py[line:727] INFO window.add_marker('114.431352','30.522711')
+2021-07-29 11:25:44,033 start.py[line:766] INFO ('pool_click_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': '3c50f4c3-a9c1-4872-9f18-883af014380c', 'lng_lat': None, 'zoom': []})
+2021-07-29 11:25:46,292 start.py[line:744] INFO {'gps data': '114.431288,30.521565,15'}
+2021-07-29 11:25:46,310 start.py[line:727] INFO window.add_marker('114.431288','30.521565')
+2021-07-29 11:25:51,465 start.py[line:744] INFO {'gps data': '114.432661,30.521639,15'}
+2021-07-29 11:25:51,475 start.py[line:727] INFO window.add_marker('114.432661','30.521639')
+2021-07-29 11:25:54,596 start.py[line:638] INFO {'self.data_obj.control_mode': <ShipControlStatus.single_point: 2>}
+2021-07-29 11:25:55,407 start.py[line:744] INFO {'gps data': '114.431588,30.519938,15'}
+2021-07-29 11:25:55,408 start.py[line:727] INFO window.add_marker('114.431588','30.519938')
+2021-07-29 11:25:55,409 start.py[line:788] INFO ('path_planning_3c50f4c3-a9c1-4872-9f18-883af014380c', {'deviceId': 'asd2312', 'mapId': '12321', 'sampling_points': [[114.431588, 30.519938]], 'path_points': [[114.431588, 30.519938]], 'path_id': 1})

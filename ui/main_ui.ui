@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1083</width>
-    <height>791</height>
+    <width>932</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,21 +15,6 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,4,1">
-    <property name="spacing">
-     <number>0</number>
-    </property>
-    <property name="leftMargin">
-     <number>0</number>
-    </property>
-    <property name="topMargin">
-     <number>0</number>
-    </property>
-    <property name="rightMargin">
-     <number>0</number>
-    </property>
-    <property name="bottomMargin">
-     <number>0</number>
-    </property>
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
@@ -37,7 +22,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <property name="spacing">
-        <number>6</number>
+        <number>0</number>
        </property>
        <property name="leftMargin">
         <number>0</number>
@@ -53,9 +38,6 @@
        </property>
        <item>
         <widget class="QLabel" name="logo_label">
-         <property name="acceptDrops">
-          <bool>true</bool>
-         </property>
          <property name="text">
           <string>ID</string>
          </property>
@@ -64,7 +46,7 @@
        <item>
         <widget class="QLabel" name="time_label">
          <property name="text">
-          <string>TextLabel</string>
+          <string>日期</string>
          </property>
         </widget>
        </item>
@@ -72,6 +54,13 @@
         <widget class="QLabel" name="direction_label">
          <property name="text">
           <string>航向角：123</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="speed_label">
+         <property name="text">
+          <string>速度：</string>
          </property>
         </widget>
        </item>
@@ -86,6 +75,9 @@
         <widget class="QLabel" name="remote_control_label">
          <property name="text">
           <string>启动遥控：0</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -155,7 +147,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="angle_label">
+           <widget class="QLabel" name="pool_label">
             <property name="text">
              <string>湖泊信息：</string>
             </property>
@@ -166,26 +158,19 @@
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;天气&lt;/p&gt;&lt;p&gt;水质&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox_5">
             <property name="title">
-             <string/>
+             <string>控制外设</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_2">
-             <item row="0" column="0">
-              <widget class="QPushButton" name="draw_button">
-               <property name="text">
-                <string>抽水</string>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
              <item row="0" column="1">
-              <widget class="QPushButton" name="drain_button">
+              <widget class="QPushButton" name="drain_push_button">
                <property name="text">
                 <string>排水</string>
                </property>
@@ -194,8 +179,18 @@
                </property>
               </widget>
              </item>
+             <item row="0" column="0">
+              <widget class="QPushButton" name="draw_push_button">
+               <property name="text">
+                <string>抽水</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
              <item row="1" column="0">
-              <widget class="QPushButton" name="headlight_button">
+              <widget class="QPushButton" name="head_light_push_button">
                <property name="text">
                 <string>大灯</string>
                </property>
@@ -205,9 +200,9 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QPushButton" name="sidelight_button">
+              <widget class="QPushButton" name="side_light_push_button">
                <property name="text">
-                <string>弦灯</string>
+                <string>舷灯</string>
                </property>
                <property name="checkable">
                 <bool>true</bool>
@@ -274,9 +269,6 @@
           </item>
           <item>
            <widget class="QLabel" name="distance_show_label">
-            <property name="acceptDrops">
-             <bool>true</bool>
-            </property>
             <property name="text">
              <string>障碍物信息</string>
             </property>
@@ -396,12 +388,9 @@
            </widget>
           </item>
           <item row="0" column="0">
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="mode_push_button">
             <property name="text">
              <string>方向</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -497,7 +486,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1083</width>
+     <width>932</width>
      <height>23</height>
     </rect>
    </property>
@@ -508,17 +497,15 @@
     <property name="title">
      <string>设置</string>
     </property>
-    <addaction name="choice_type"/>
+    <addaction name="base_setting_action"/>
     <addaction name="separator"/>
-    <addaction name="actiondas"/>
-    <addaction name="separator"/>
-    <addaction name="action_5"/>
+    <addaction name="advance_setting_action"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
      <string>关于</string>
     </property>
-    <addaction name="action"/>
+    <addaction name="about_author_action"/>
     <addaction name="separator"/>
    </widget>
    <addaction name="menu"/>
@@ -530,17 +517,17 @@
     <string>选择类型</string>
    </property>
   </action>
-  <action name="actiondas">
+  <action name="base_setting_action">
    <property name="text">
     <string>基础设置</string>
    </property>
   </action>
-  <action name="action">
+  <action name="about_author_action">
    <property name="text">
     <string>作者</string>
    </property>
   </action>
-  <action name="action_5">
+  <action name="advance_setting_action">
    <property name="text">
     <string>高级设置</string>
    </property>

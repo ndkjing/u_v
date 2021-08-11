@@ -1,0 +1,32 @@
+2021-07-29 11:09:03,369 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431713, 30.523059]]}
+2021-07-29 11:09:03,578 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:09:03,611 data_manager.py[line:152] INFO {'pool_id': UUID('bd623508-dd34-4bde-8a7c-618ddd2b5f1b')}
+2021-07-29 11:10:00,697 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431716, 30.523073]]}
+2021-07-29 11:10:00,950 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:11:09,743 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431545, 30.523728]]}
+2021-07-29 11:11:09,910 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:11:09,944 data_manager.py[line:152] INFO {'pool_id': 'f8f6fb66-b1f3-4ebb-8c1a-68f94dbc6576'}
+2021-07-29 11:21:05,012 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431781, 30.522212]]}
+2021-07-29 11:21:05,263 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:21:05,334 data_manager.py[line:165] INFO {'在本地找到湖泊 poolid': 'f8f6fb66-b1f3-4ebb-8c1a-68f94dbc6576'}
+2021-07-29 11:21:08,299 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431696, 30.523072]]}
+2021-07-29 11:21:08,534 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:21:08,613 data_manager.py[line:165] INFO {'在本地找到湖泊 poolid': 'f8f6fb66-b1f3-4ebb-8c1a-68f94dbc6576'}
+2021-07-29 11:21:17,395 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431695, 30.523071]]}
+2021-07-29 11:21:17,603 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:21:17,675 data_manager.py[line:165] INFO {'在本地找到湖泊 poolid': 'f8f6fb66-b1f3-4ebb-8c1a-68f94dbc6576'}
+2021-07-29 11:22:27,910 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431704, 30.523059]]}
+2021-07-29 11:22:28,133 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:22:28,190 data_manager.py[line:165] INFO {'在本地找到湖泊 poolid': 'f8f6fb66-b1f3-4ebb-8c1a-68f94dbc6576'}
+2021-07-29 11:22:35,116 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431705, 30.52306]]}
+2021-07-29 11:22:35,332 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:22:35,405 data_manager.py[line:165] INFO {'在本地找到湖泊 poolid': 'f8f6fb66-b1f3-4ebb-8c1a-68f94dbc6576'}
+2021-07-29 11:22:49,824 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431704, 30.523059]]}
+2021-07-29 11:22:50,038 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:22:50,097 data_manager.py[line:165] INFO {'在本地找到湖泊 poolid': 'f8f6fb66-b1f3-4ebb-8c1a-68f94dbc6576'}
+2021-07-29 11:24:38,644 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431698, 30.523071]]}
+2021-07-29 11:24:38,865 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:24:38,890 data_manager.py[line:165] INFO {'在本地找到湖泊 poolid': 'f8f6fb66-b1f3-4ebb-8c1a-68f94dbc6576'}
+2021-07-29 11:25:44,954 data_manager.py[line:114] INFO {'pool_center_lng_lat': [[114.431695, 30.523062]]}
+2021-07-29 11:25:45,121 data_manager.py[line:120] INFO {'config.pool_name': '喻家湖'}
+2021-07-29 11:25:45,193 data_manager.py[line:165] INFO {'在本地找到湖泊 poolid': 'f8f6fb66-b1f3-4ebb-8c1a-68f94dbc6576'}
