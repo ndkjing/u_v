@@ -3,3 +3,4 @@ build/*
 log/
 __pychche__/
 __pychche__/*
+*/__pychche__/*
