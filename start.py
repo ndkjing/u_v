@@ -607,7 +607,7 @@ class MainWindow(QMainWindow):
         重新选择湖泊
         :return:
         """
-        # TODO
+        self.data_obj.pool_code=None
 
     def reload_view(self):
         """
@@ -615,6 +615,7 @@ class MainWindow(QMainWindow):
         :return:
         """
         view.reload()
+
 
     # 初始化定时器
     def init_timer(self):
@@ -868,7 +869,6 @@ if __name__ == '__main__':
         # myDlg.setWindowFlag(QtCore.Qt.FramelessWindowHint)  # 隐藏边框
         # myDlg.setAttribute(QtCore.Qt.WA_TranslucentBackground)  # 设置窗口背景透明
         # myDlg.setStyleSheet("#MainWindow{border-image:url(./statics/background.jpg);}")
-        # main_win.start_once()
         main_win.show()
         sys.exit(myapp.exec_())
     except Exception as e:

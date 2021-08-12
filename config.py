@@ -147,7 +147,7 @@ pi2mqtt_interval = 1
 # 线程等待时间
 thread_sleep_time = 0.5
 # 船编号
-ship_code = '3c50f4c3-a9c1-4872-9f18-883af014380c'
+ship_code = '3c50f4c3-a9c1-4872-9f18-883af014380a'
 # 串口位置和波特率
 # 单片机
 # stc_port = '/dev/ttyAMA0'
