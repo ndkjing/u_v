@@ -10,6 +10,7 @@ import requests
 
 import config
 from utils import lng_lat_calculate
+from utils import check_network
 
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 
@@ -665,16 +666,35 @@ class BaiduMap(object):
         with open('geojeson_data.json', 'w') as f:
             json.dump(return_json_data, f)
         return return_json_data
-
+    @staticmethod
+    def get_ip_address(ip=None):
+        """
+        :param ip: 传入ip 或者自动获取ip
+        :return: {'status': '1', 'info': 'OK', 'infocode': '10000', 'country': '中国',
+        'province': '湖北省', 'city': '武汉市', 'district': '洪山区', 'isp': '中国移动',
+        'location': '114.400718,30.504259', 'ip': '117.154.83.54'}
+        """
+        if ip is None:
+            ip = check_network.get_extern_ip()
+        url = 'https://restapi.amap.com/v5/ip?key=%s&type=%d&ip=%s'%(config.gaode_key,4,ip)
+        response = requests.get(url)
+        if response.status_code==200:
+            return_data = json.loads(response.content)
+            return return_data
+        else:
+            return False
 
 if __name__ == '__main__':
-    pass
-    src_point = [114.4314, 30.523558]  # 喻家湖
-    # src_point = [114.431400, 30.523558]
-    obj = BaiduMap(src_point, zoom=15,
-                   scale=1, map_type= config.MapType.gaode)
-    print(obj.get_pool_name())
-    print(obj.get_area_code(src_point))
+    ip_address = BaiduMap.get_ip_address()
+    print(ip_address)
+    print(ip_address.get('location'))
+
+    # src_point = [114.4314, 30.523558]  # 喻家湖
+    # # src_point = [114.431400, 30.523558]
+    # obj = BaiduMap(src_point, zoom=15,
+    #                scale=1, map_type= config.MapType.gaode)
+    # print(obj.get_pool_name())
+    # print(obj.get_area_code(src_point))
     # pool_cnts, (pool_cx, pool_cy) = obj.get_pool_pix(b_show=False)
     # scan_cnts = obj.scan_pool(meter_gap=50, safe_meter_distance=10, b_show=False)
     # return_gps, return_gps_list = obj.pix_to_gps(scan_cnts)

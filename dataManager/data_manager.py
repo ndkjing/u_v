@@ -20,6 +20,7 @@ class DataManager:
     def __init__(self, data_obj: data_define.DataDefine):
         self.logger = log.LogHandler('DataManager')
         self.data_obj = data_obj
+        self.ip_lng_lat = None
         self.current_map_type = config.MapType.gaode
         if config.communication == config.CommunicationMethod.lora:
             self.receive_data_obj = lora_communication.LoraCommunication(data_obj)
@@ -28,6 +29,8 @@ class DataManager:
                                                                          config.topics,
                                                                          data_obj)
             self.init_thread()
+
+
 
     def init_thread(self):
         """

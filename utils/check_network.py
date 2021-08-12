@@ -8,6 +8,31 @@ from subprocess import run, PIPE
 import config
 import re
 import subprocess
+import requests, json
+import socket
+
+
+def get_local_ip() -> str:
+    """
+    获取局域网ip
+    :return:
+    """
+    # 获取本机计算机名称
+    hostname = socket.gethostname()
+    # 获取本机ip
+    ip = socket.gethostbyname(hostname)
+    return ip
+
+
+def get_extern_ip() -> str:
+    """
+    获取外网ip地址
+    :return:
+    """
+    data = json.loads(requests.get("http://ip.jsontest.com/").text)
+    ip = data['ip']
+    print(ip)
+    return ip
 
 
 def check_network():
@@ -39,10 +64,11 @@ def get_ping_delay():
 
 
 if __name__ == '__main__':
-    while 1:
-        # start_time = time.time()
-        # print("network: ", check_network())
-        # 时间大概在 3.1 到20 秒
-        # print('cost time:', time.time() - start_time)
-        # time.sleep(config.check_network_interval)
-        print(get_ping_delay())
+    print(get_local_ip())
+    # while 1:
+    #     # start_time = time.time()
+    #     # print("network: ", check_network())
+    #     # 时间大概在 3.1 到20 秒
+    #     # print('cost time:', time.time() - start_time)
+    #     # time.sleep(config.check_network_interval)
+    #     print(get_ping_delay())

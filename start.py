@@ -18,12 +18,12 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import pyqtSlot, QUrl, Qt, QThread, QTimer, QDate
 from qt_material import apply_stylesheet
 
-from ui import main_ui, base_setting_ui, advance_setting_ui,author_ui
+from ui import main_ui, base_setting_ui, advance_setting_ui, author_ui
 from dataManager import data_define
 from dataManager import data_manager
 from utils import log
 from utils import opencv_radar_scan
-
+from moveControl import build_map
 import config
 
 logger = log.LogHandler('main')
@@ -56,6 +56,7 @@ class BaseSettingWindow(QDialog):
         else:
             event.ignore()
 
+
 class AuthorWindow(QDialog):
     def __init__(self):
         QDialog.__init__(self)
@@ -80,6 +81,7 @@ class AuthorWindow(QDialog):
     #         print('exit base setting')
     #     else:
     #         event.ignore()
+
 
 class AdvanceSettingWindow(QDialog):
     advance_setting_signal = QtCore.pyqtSignal()
@@ -207,6 +209,15 @@ class MainWindow(QMainWindow):
         self.init_widget()
         # 显示状态消息
         self.show_status()
+        #
+        # self.start_once()
+
+    def start_once(self):
+        """
+        程序启动后需要执行一次程序
+        :return:
+        """
+        self.map_center()  # 设置地图居中点
 
     def init_widget(self):
         """
@@ -273,7 +284,7 @@ class MainWindow(QMainWindow):
     # 绑定信号连接
     def init_signal_slot(self):
         # 测试使用
-        self.ui.forward_button.clicked.connect(self.map_add_line)
+        self.ui.forward_button.clicked.connect(self.map_center)
         # 刷新页面
         self.ui.reload_button.clicked.connect(self.reload_view)
         # 重选湖泊
@@ -610,7 +621,7 @@ class MainWindow(QMainWindow):
         self.ui.time_lcd.setDigitCount(8)
         timer = QTimer(self)
         timer.timeout.connect(self.showtime)
-        timer.timeout.connect(self.map_center)
+        # timer.timeout.connect(self.map_center)
         timer.timeout.connect(self.update_base_info)
         timer.timeout.connect(self.update_detect_info)
         timer.timeout.connect(self.update_base_setting_data)
@@ -742,13 +753,22 @@ class MainWindow(QMainWindow):
         self.data_manager_obj.send_data(msg=msg)
 
     # 设置地图居中
-    def map_center(self):
-        if self.data_obj.lng_lat is not None and self.data_obj.zoom is not None:
-            if self.data_obj.is_center:
-                str_command = "window.set_zoom_and_center('%d','%f','%f')" % \
-                              (self.data_obj.zoom, self.data_obj.lng_lat[0], self.data_obj.lng_lat[1])
-                logger.info(str_command)
-                view.page().runJavaScript(str_command)
+    def map_center(self, lng_lat=None):
+        """
+        根据ip地址设置地图居中
+        :param lng_lat: 传递则根据传递值设置居中，不传递则使用上网ip搜索
+        :return: 无
+        """
+        if lng_lat is None or not isinstance(lng_lat,list):
+            ip_data = build_map.BaiduMap.get_ip_address()
+            ip_lng_lat = ip_data.get('location')
+            if ip_lng_lat:
+                temp_list = ip_lng_lat.split(',')
+                lng_lat = [float(i) for i in temp_list]
+        str_command = "window.set_zoom_and_center('%d','%f','%f')" % \
+                      (10, lng_lat[0], lng_lat[1])
+        logger.info(str_command)
+        view.page().runJavaScript(str_command)
 
     # 在地图上添加标记物
     def map_add_marker(self):
@@ -758,7 +778,7 @@ class MainWindow(QMainWindow):
         view.page().runJavaScript(str_command)
 
     # 在地图上连线
-    def map_add_line(self,lng_lat_data:list):
+    def map_add_line(self, lng_lat_data: list):
         """
         :param lng_lat_data:二位数组经纬度
         lng_lat_data = [
@@ -769,7 +789,7 @@ class MainWindow(QMainWindow):
         :return: 无 在地图上绘制数据
         """
         json_lng_lat_data = json.dumps(lng_lat_data)
-        str_command = "window.add_line(%s)"%json_lng_lat_data
+        str_command = "window.add_line(%s)" % json_lng_lat_data
         logger.info(str_command)
         view.page().runJavaScript(str_command)
 
@@ -784,7 +804,7 @@ class MainWindow(QMainWindow):
             self.data_obj.click_zoom = int(lng_lat_zoom[2])
             self.map_add_marker()
             # 如果还没有找到湖泊标记为找湖
-            print('self.data_obj.pool_code',self.data_obj.pool_code)
+            print('self.data_obj.pool_code', self.data_obj.pool_code)
             if self.data_obj.pool_code is None:
                 send_dict = {
                     # 设备号
@@ -808,7 +828,7 @@ class MainWindow(QMainWindow):
             else:
                 if self.data_obj.control_mode == config.ShipControlStatus.single_point:
                     self.data_obj.target_lng_lat = [float(lng_lat_zoom[0]), float(lng_lat_zoom[1])]
-                    send_dict={
+                    send_dict = {
                         "deviceId": "asd2312",
                         "mapId": "12321",
                         # 准备执行采样或检测的点经纬度
@@ -848,6 +868,7 @@ if __name__ == '__main__':
         # myDlg.setWindowFlag(QtCore.Qt.FramelessWindowHint)  # 隐藏边框
         # myDlg.setAttribute(QtCore.Qt.WA_TranslucentBackground)  # 设置窗口背景透明
         # myDlg.setStyleSheet("#MainWindow{border-image:url(./statics/background.jpg);}")
+        # main_win.start_once()
         main_win.show()
         sys.exit(myapp.exec_())
     except Exception as e:
